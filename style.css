@@ -67,9 +67,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "OldStandard TT", "Libre Baskerville", "Poppins", sans-serif;
 }
-
 body {
     /* display: flex; */
     justify-content: center;
@@ -129,7 +128,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .location{
@@ -159,7 +158,6 @@ text-align: center;
 
 .contact {
     background: #2F3B4B;
-    
 }
 
 .submit_form {
@@ -355,9 +353,11 @@ textarea.input {
 }
 /* ------------------------------ footer ------------------------------ */
 #footer {
+    /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
     background-color: #a2a2a8;
     width: 100%;
     min-height: 250px;
+
 }
 
 #footer p {
@@ -365,6 +365,7 @@ textarea.input {
 }
 
 .footer-heading {
+    /* text-align: center; */
     padding-top: 20px;
     margin-top: 20px;
     font-size: 20px;
@@ -381,6 +382,7 @@ textarea.input {
     width: 50px;
     height: 50px;
     transition: 0.5s;
+    /* margin-top: 50px; */
 }
 
 .social-icons img:hover {
@@ -388,11 +390,10 @@ textarea.input {
 }
 
 .newsletter {
-    padding: 0;
+    /* color: black; */
+    padding: 0px;
 }
-
 .btn-newsletter {
-    /* margin-top: 10px;  Adjust spacing if needed */
     box-shadow: none !important;
     border: none;
     border-radius: 20px;
@@ -401,4 +402,6 @@ textarea.input {
     font-weight: 500;
     font-size: 18px;
     transition: 0.3s;
+    position: relative;
+    top: 10px;
 }
