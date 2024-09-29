@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* -------------------- Responsive ------------------- */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .item {
         grid-template-columns: 1fr;
     }
@@ -62,13 +62,50 @@
         border-radius: 20px;
         padding: 8px 25px;
     }
-}
+} */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "OldStandard TT", "Libre Baskerville", "Poppins", sans-serif;
+}
+/* -------------------Navbar------------------------- */
+#nav-bar {
+    position: relative; 
+    top: 0;
+    z-index: 10;
 }
 
+.navbar {
+    background-image: linear-gradient(to right, #2F3B4B, #31455f);
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.navbar-nav li {
+    pad: 0 10px;
+}
+
+.navbar-nav li a {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+/* ---------------Navbar-ends------------------------------ */
 body {
     /* display: flex; */
     justify-content: center;
