@@ -80,6 +80,7 @@ text-align: center;
     font-weight: 600;
     margin-top: 2.5vh;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .social-media {
@@ -219,4 +220,41 @@ textarea.input {
     padding: 10vh;
     padding-left: 26vh;
     padding-top: 5vh;
+}
+@media(max-width:850px){
+    .item{
+        grid-template-columns: 1fr;
+    }
+    .contact{
+        display: none;
+    }
+    .text{
+        font-size: 40px; 
+        text-align: center;
+    }
+    .btn{
+        width: 25%;
+        height: 40px; 
+        font-size: 12px;
+     }
+
+}
+
+@media(max-width:480px){
+    .item{
+        grid-template-columns: 1fr;
+    }
+    .contact{
+        display: none;
+    }
+    .text{
+        font-size: 20px; 
+        text-align: center;
+    } 
+    .btn{
+       width: 20%;
+       height: 40px; 
+       font-size: 12px;
+    }
+
 }
