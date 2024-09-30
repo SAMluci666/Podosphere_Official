@@ -18,9 +18,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Libre Baskerville -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!--  -->
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -82,24 +84,24 @@
             </div>
             <div class="submit_form">
                 <h4 class="third-text">Contact us</h4>
-                <form action="">
+                <form action="http://localhost:3000/contact" method="POST" enctype="application/x-www-form-urlencoded">
                     <div class="input-box">
-                        <input type="text" class="input" required>
+                        <input type="text" name="name" class="input" required>
                         <label for="">Name</label>
                     </div>
                     <div class="input-box">
-                        <input type="email" class="input" required>
+                        <input type="email" name="email" class="input" required>
                         <label for="">Email</label>
                     </div>
                     <div class="input-box">
-                        <input type="tel" class="input" required>
+                        <input type="tel" name="phone" class="input" required>
                         <label for="">Phone</label>
                     </div>
                     <div class="input-box">
-                        <textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="message" class="input" required cols="30" rows="10"></textarea>
                         <label for="">Message</label>
                     </div>
-                    <button type="button" class="btn btn-form btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-form btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -121,18 +123,21 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-  <section id="footer">
+    <section id="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
                     <!-- Newsletter -->
                     <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <div class="form-floating mb-3 newsletter">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                    </div>
-                   <button type="button" class="btn btn-primary btn-newsletter">Submit</button>
+                    <form action="http://localhost:3000/newsletter" method="POST">
+                        <div class="form-floating mb-3 newsletter">
+                            <input type="email" name="email" class="form-control" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
+                    </form>
                 </div>
                 <div class="col-md-3">
                     <h5 class="footer-heading">Contacts</h5>
