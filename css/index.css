@@ -1,22 +1,28 @@
-
-
 :root {
-    --primary-color: #161548;
-    --primary-color-highlight: #606ab8;
+    /* --primary-color: #EB6E00; */
+    --primary-color: #ff914d;           
+    --primary-color-highlight: #4a90e2; 
+    --primary-white-highlight: #ffffff;
+    --secondary-color: #000000; /*for buttons*/
+
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
-
+    --accent-color: #333333;
+    --text-color: #333333;  /*for readablility*/
 }
+
 /* body{
     overflow: hidden;
 
 } */
 .hidden-scrollbar::-webkit-scrollbar {
     display: none;
-  }
-html{
+}
+
+html {
     scroll-behavior: smooth;
 }
+
 /* Media Queries for Responsive Designing */
 /*
 @media (min-width: 544px) {}
@@ -31,9 +37,10 @@ a {
     color: var(--primary-color);
 }
 
-a:hover {
+/* a:hover {
     color: var(--primary-color-highlight);
-}
+} */
+
 /* -------------------Navbar------------------------- */
 #nav-bar {
     position: absolute;
@@ -44,13 +51,19 @@ a:hover {
 }
 
 .navbar {
-    background-image: linear-gradient(to right, #2F3B4B, #31455f);
+    /* background-image: linear-gradient(to right, var(--primary-color),var(--primary-color-highlight)); */
+    background-color: transparent;
     padding: 0 !important;
+}
+.navbar>.container-fluid 
+/* For making sure the logo and toggle are in same line */
+{
+    flex-wrap: nowrap
 }
 
 .navbar-brand img {
-    height: 50px;
-    padding-left: 20px;
+    /* height: 50px; */
+    width: 40%;
 }
 
 .navbar-nav li {
@@ -58,14 +71,16 @@ a:hover {
 }
 
 .navbar-nav li a {
-    color: white !important;
+    color: var(--secondary-color);
     font-size: 18px;
     font-weight: 600;
     float: right;
     text-align: left;
 }
-
-.bi-list{
+.navbar-nav li a:hover {
+    color: var(--primary-color-highlight);
+} 
+.bi-list {
     color: white;
     font-size: 30px;
 }
@@ -82,7 +97,7 @@ a:hover {
     padding: 0 1rem;
     margin: 0 auto;
 }
- 
+
 /* Hero Section Starts */
 .hero {
     position: relative;
@@ -116,7 +131,7 @@ a:hover {
 
     z-index: 2;
     background-color: var(--primary-color);
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 .hero__video {
@@ -132,6 +147,7 @@ a:hover {
 
     transform: translateX(-50%) translateY(-50%);
 }
+
 /* 
 .hero__content{
     position: absolute;
@@ -156,41 +172,43 @@ a:hover {
 .hero__content-width {
     max-width: 540px;
 }
-.hero__content-description
-{
+
+.hero__content-description {
     text-align: center;
 }
+
 .hero__scroll-btn {
     position: absolute;
     bottom: 20px;
     left: 50%;
 
-    transform: translateX(-50%);    
+    transform: translateX(-50%);
     z-index: 2;
-    
+
     color: var(--bs-light);
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
 }
 
-.hero__scroll-btn:hover{
+.hero__scroll-btn:hover {
     color: var(--bs-light);
     opacity: 0.8;
 }
 
-.hero__scroll-btn .bi{
+.hero__scroll-btn .bi {
     transition-delay: 0.8s;
     animation: bounce 1s infinite alternate;
 }
 
 @keyframes bounce {
-    from{
+    from {
         transform: translateY(0px);
     }
-    to{
+
+    to {
         transform: translateY(-10px);
     }
 }

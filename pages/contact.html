@@ -31,82 +31,91 @@
 <body>
     <!----------------------Navbar---------------------------->
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../assets/images/podosphere-logo.jpeg" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid py-4">
+                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">HOME</a>
+                            <a class="nav-link" href="/index.html">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about-us">ABOUT US</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#events">EVENTS</a>
-                        </li>
-                        <li class="nav-item">
+                        </li>   
+                        <li class="nav-item">   
                             <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#faq">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
+                            <a class="nav-link" href="#contact">CONTACT</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </section>
-    <!-- Contact Page -->
-    <div class="contact_container">
-        <div class="item">
-            <div class="contact">
-                <div class="first_text">Let's Get in touch </div>
-                <img src="../assets/images/podosphere-logo.jpeg" alt="" class="image">
-                <div id="text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, impedit beatae.
-                    Architecto earum inventore, maxime accusamus quasi incidunt quas fugiat natus dolores est
-                    exercitationem dolorum deserunt molestias necessitatibus blanditiis modi.</div>
-                <div class="social_links">
-                    <span class="secnd-text">Connect with us :</span>
-                    <ul class="social-media">
-                        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
 
-                    </ul>
+    <!-- Contact Page -->
+    <section id="contact">
+
+        <div class="contact_container">
+            <div class="item">
+                <div class="contact">
+                    <div class="first_text">Let's Get in touch </div>
+                    <img src="../assets/images/podosphere-logo.jpeg" alt="" class="image">
+                    <div id="text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, impedit beatae.
+                        Architecto earum inventore, maxime accusamus quasi incidunt quas fugiat natus dolores est
+                        exercitationem dolorum deserunt molestias necessitatibus blanditiis modi.</div>
+                    <div class="social_links">
+                        <span class="secnd-text">Connect with us :</span>
+                        <ul class="social-media">
+                            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="submit_form">
+                    <h4 class="third-text">Contact us</h4>
+                    <form action="http://localhost:3000/contact" method="POST"
+                        enctype="application/x-www-form-urlencoded">
+                        <div class="input-box">
+                            <input type="text" name="name" class="input" required>
+                            <label for="">Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email" class="input" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" name="phone" class="input" required>
+                            <label for="">Phone</label>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="message" id="message" class="input" required cols="30" rows="10"></textarea>
+                            <label for="">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-form btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
-            <div class="submit_form">
-                <h4 class="third-text">Contact us</h4>
-                <form action="http://localhost:3000/contact" method="POST" enctype="application/x-www-form-urlencoded">
-                    <div class="input-box">
-                        <input type="text" name="name" class="input" required>
-                        <label for="">Name</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" name="email" class="input" required>
-                        <label for="">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" name="phone" class="input" required>
-                        <label for="">Phone</label>
-                    </div>
-                    <div class="input-box">
-                        <textarea name="message" id="message" class="input" required cols="30" rows="10"></textarea>
-                        <label for="">Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-form btn-primary">Submit</button>
-                </form>
-            </div>
         </div>
-    </div>
+    </section>
     <div class="location">
         <div class="left">
             <div class="loca">
@@ -165,7 +174,7 @@
                     <div class="col-md-1"></div>
                 </div>
             </div>
-           
+
         </div>
         <div class="copyright">
             <p>&copy; 2024 Podosphere</p>
