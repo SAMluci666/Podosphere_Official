@@ -20,42 +20,81 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Java Script  -->
+     <script>
+    // JavaScript to handle scroll and navbar background change
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        var heroSection = document.querySelector('.hero');
+        var heroBottom = heroSection.offsetHeight;  // Height of the hero section
+
+        if (window.scrollY > heroBottom) {
+            // When scrolling past the hero section
+            navbar.classList.remove('navbar-transparent');
+            navbar.classList.add('navbar-colored');
+            navbar.classList.remove('sticky-top');
+        } else {
+            // When within the hero section
+            navbar.classList.remove('navbar-colored');
+            // navbar.classList.add('navbar-transparent');
+            navbar.classList.add('sticky-top');
+        }   
+    });
+
+</script>
 </head>
 
 <body class="hidden-scrollbar">
 
     <!----------------------Navbar---------------------------->
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="/assets/images/podosphere-logo.jpeg" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid py-3">
+                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class="" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
+                    aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation" onclick="colorfulNavbar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar">
+                <div class="collapse navbar-collapse" id="navigation-bar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#top">HOME</a>
+                            <a class="nav-link underline-effect" href="">HOME</a>
+                        </li>
+                        <!-- Dropdown Mentorship -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link underline-effect" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                MENTORSHIP
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Live connect.html">Live Connect</a></li>
+                                <li><a class="dropdown-item" href="Events.html#upcoming-events">Upcoming Events</a></li>
+                                <li><a class="dropdown-item" href="Events.html#past-events">Past Events</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link underline-effect" href="#about-us">COURSES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about-us">ABOUT US</a>
+                            <a class="nav-link underline-effect" href="#events">EVENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#events">EVENTS</a>
+                            <a class="nav-link underline-effect" href="#testimonials">HIRING</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                            <a class="nav-link underline-effect" href="#faq">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#faq">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/contact.html">CONTACT</a>
+                            <a class="nav-link underline-effect" href="/pages/contact.html">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -68,21 +107,35 @@
         <!-- Adding an overlay to focus the text better -->
         <div class="hero__overlay"> <!-- Empty--></div>
         <!-- Inserting the hero video -->
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy"
+        <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy"
             class="hero__video">
-            <source src="assets/images/1. Home_book_video.mp4" type="video/mp4">
+            <source src="" type="video/mp4"> -->
         </video>
 
         <!-- Adding the hero content -->
-        <div
-            class="h-100 container-custom position-relative d-flex align-items-center justify-content-center">
-            <div class="d-flex h-100 align-items-center justify-content-center hero__content-width">
-                <div class="text-white hero__content">
-                    <h1 class="fw-bold mb-4 hero__heading">Podosphere</h1>
-                    <p class="lead mb-4 hero__content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non similique aliquam ad voluptas aperiam blanditiis omnis porro repellendus repellat.</p>
-                    <a href="#" class="mt-2 btn btn-lg btn-outline-light" role="button">Learn More</a>
+        <div class="h-100 container-custom position-relative d-flex hero__parent">
+            <div class="content-container">
+                <div class="d-flex h-100 hero__content-width">
+                    <div class="text-white hero__content">
+                        <h1 class="fw-bold mb-4 hero__heading">
+                            <!-- <img src="assets/images/logo/logo+tagline-wihtout-bg.png" alt=""> -->
+                             SYNC IN
+                        </h1>
+                        <h3>
+                            <span class="text-warning">STAY IN </span> <span class="hero__tagline-keyword">SYNC</span>, <span class="text-warning">MAKE THE</span><span class="hero__tagline-keyword">LINK</span>
+                        </h3>
+                        <p class="lead mb-4 hero__content-description">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Non similique aliquam ad voluptas aperiam blanditiis omnis porro repellendus repellat.
+                        </p>
+                        <a href="#" class="mt-2 btn btn-lg btn-outline-light" role="button">Learn More</a>
+                    </div>
                 </div>
             </div>
+            <div class="hero__logo justify-content-sm-end">
+                <img class="img-fluid" src="assets/images/temp_avatar.jpg" alt="">
+            </div>
+            
         </div>
 
         <!-- 
@@ -92,9 +145,65 @@
         -->
 
         <!--* The Scroll Down Arrow -->
-        <a href="#scroll-down" class="hero__scroll-btn">
+        <a href="#explore" class="hero__scroll-btn">
             Explore <i class="bi bi-arrow-down-short"></i>
         </a>
+    </section>
+    <section id="explore">
+        <!-- Tagline -->
+        <div class="tagline">
+            <span>Connecting</span> Futures, <span>Building</span> Legacies
+        </div>
+        <p class="hero__tagline-content">Connect with peers, enhance your skills, gain valuable experience, and unlock
+            pathways to your dream career with Podosphere.</p>
+
+        <section id="explore-card" class="card-container">
+            <div class="card" style="background-color: #FFECB3;">
+                <h3>Courses</h3>
+                <p>Unlock your potential with our curated courses designed to equip you with essential skills.</p>
+            </div>
+            <div class="card" style="background-color: #FFE0B2;">
+                <h3>Mentorship</h3>
+                <p>Connect with experienced professionals who provide personalized advice and support.</p>
+            </div>
+            <div class="card" style="background-color: #FFCCBC;">
+                <h3>Hiring</h3>
+                <p>Explore job opportunities and internships from top companies. Your dream job is a click away!</p>
+            </div>
+            <div class="card" style="background-color: #FFAB91;">
+                <h3>Networking Events</h3>
+                <p>Have questions? Visit our Contact Us page to reach out. We’re here to help you.</p>
+            </div>
+        </section>
+
+        <!-- Networking Events Section -->
+        <section id="events">
+            <h2 class="text-center">Networking Events</h2>
+            <div class="event-cards">
+                <div class="network-card card">
+                    <h3>Professional UI/UX Design</h3>
+                    <p>Become a professional UI/UX Designer in 6 months with Designwings.</p>
+                    <button class="btn btn-primary">Join Waitlist</button>
+                </div>
+                <div class="network-card card">
+                    <h3>Full Stack Web Development</h3>
+                    <p>Design, build platforms, and get guaranteed placements.</p>
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="our-partners" class="partners-section">
+            <h2>Our Partners</h2>
+            <div class="partner-logos">
+                <div class="logo">Brand A</div>
+                <div class="logo">Brand B</div>
+                <div class="logo">Brand C</div>
+                <div class="logo">Brand D</div>
+            </div>
+        </section>
+
     </section>
 </body>
 
