@@ -510,6 +510,10 @@ p {
     color: white;
     
 }
+.card:hover p {
+    color: white;
+    /* Ensure paragraph text also turns white */
+}
 .card:hover h3 {
     color: white;
     /* Change heading color to white on hover */
