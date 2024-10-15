@@ -22,27 +22,27 @@
         rel="stylesheet">
 
     <!-- Java Script  -->
-     <script>
-    // JavaScript to handle scroll and navbar background change
-    window.addEventListener('scroll', function () {
-        var navbar = document.getElementById('navbar');
-        var heroSection = document.querySelector('.hero');
-        var heroBottom = heroSection.offsetHeight;  // Height of the hero section
+    <script>
+        // JavaScript to handle scroll and navbar background change
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            var heroSection = document.querySelector('.hero');
+            var heroBottom = heroSection.offsetHeight;  // Height of the hero section
 
-        if (window.scrollY > heroBottom) {
-            // When scrolling past the hero section
-            navbar.classList.remove('navbar-transparent');
-            navbar.classList.add('navbar-colored');
-            navbar.classList.remove('sticky-top');
-        } else {
-            // When within the hero section
-            navbar.classList.remove('navbar-colored');
-            // navbar.classList.add('navbar-transparent');
-            navbar.classList.add('sticky-top');
-        }   
-    });
+            if (window.scrollY > heroBottom) {
+                // When scrolling past the hero section
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-colored');
+                navbar.classList.remove('sticky-top');
+            } else {
+                // When within the hero section
+                navbar.classList.remove('navbar-colored');
+                // navbar.classList.add('navbar-transparent');
+                navbar.classList.add('sticky-top');
+            }
+        });
 
-</script>
+    </script>
 </head>
 
 <body class="hidden-scrollbar">
@@ -50,10 +50,12 @@
     <!----------------------Navbar---------------------------->
     <section id="nav-bar">
         <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid py-3">
-                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class="" alt=""></a>
+            <div class="container-fluid py-3 navbar__container">
+                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
+                        alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
-                    aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation" onclick="colorfulNavbar()">
+                    aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation"
+                    onclick="colorfulNavbar()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -67,8 +69,8 @@
                         </li>
                         <!-- Dropdown Mentorship -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link underline-effect" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link underline-effect" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 MENTORSHIP
                             </a>
                             <ul class="dropdown-menu">
@@ -119,11 +121,9 @@
                     <div class="text-white hero__content">
                         <h1 class="fw-bold mb-4 hero__heading">
                             <!-- <img src="assets/images/logo/logo+tagline-wihtout-bg.png" alt=""> -->
-                             SYNC IN
+                            <span class="hero__tagline-part">STAY IN </span> <span class="hero__tagline-keyword">SYNK</span>
+                            <span class="hero__tagline-part">MAKE THE </span><span class="hero__tagline-keyword">LINK</span>
                         </h1>
-                        <h3>
-                            <span class="text-warning">STAY IN </span> <span class="hero__tagline-keyword">SYNC</span>, <span class="text-warning">MAKE THE</span><span class="hero__tagline-keyword">LINK</span>
-                        </h3>
                         <p class="lead mb-4 hero__content-description">Lorem, ipsum dolor sit amet consectetur
                             adipisicing
                             elit. Non similique aliquam ad voluptas aperiam blanditiis omnis porro repellendus repellat.
@@ -135,7 +135,7 @@
             <div class="hero__logo justify-content-sm-end">
                 <img class="img-fluid" src="assets/images/temp_avatar.jpg" alt="">
             </div>
-            
+
         </div>
 
         <!-- 
