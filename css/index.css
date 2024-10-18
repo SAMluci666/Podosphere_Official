@@ -489,8 +489,9 @@ p {
     /* height: 50%; */
     /* min-width: 300px; */
     min-height: 250px;
+    width: 300px;
     padding: 20px;
-    margin: 0px;
+    margin: 10px;
 
     border: .5px solid #E1E1E1;
     border-radius: 14px;
