@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 :root {
     /* --primary-color: #EB6E00; */
-    --primary-color: #ff914d;           
-    --primary-color-highlight: #4a90e2; 
+    --primary-color: #eb6e00;
+    --primary-color-highlight: #4a90e2;
     --primary-white-highlight: #ffffff;
     --secondary-color: #000000; /*for buttons*/
 
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
-    --accent-color: #333333;
+    --accent-color: #2b2b2b;
     --text-color: #333333;  /*for readablility*/
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+p {
+    font-family: 'Montserrat' 'Lato', sans-serif;
+    font-weight: 300;
+    color: var(--primary-white-highlight);
+    line-height: 1.6;
+}
 /* -------------------- Responsive ------------------- */
 @media screen and (max-width: 768px) {
     .item {
@@ -93,40 +97,71 @@ body {
 
 /* -------------------Navbar------------------------- */
 #nav-bar {
-    position: relative;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 5;
 }
 
+.navbar__container {
+    flex-wrap: nowrap;
+}
+
 .navbar {
-    background-image: linear-gradient(to right, var(--primary-color),var(--primary-color-highlight));
+    /* background-image: linear-gradient(to right, var(--primary-color),var(--primary-color-highlight)); */
     /* background-color: transparent; */
     padding: 0 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background: var(--accent-color); /* Your desired background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.navbar>.container-fluid 
+/* Transparent navbar on hero section */
+.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+/* Navbar styling when scrolling past hero section */
+.navbar-colored {
+    background: var(--accent-color); /* Your desired background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.navbar .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 /* For making sure the logo and toggle are in same line */
+/* .navbar>.container-fluid 
 {
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
+} */
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    width: auto;
 }
 
 .navbar-brand img {
-    /* height: 50px; */
-    width: 40%;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 }
 
 .navbar-nav li {
-    pad: 0 10px;
+    padding: 0 10px;
 }
 
 .navbar-nav li a {
-    color: var(--secondary-color);
-    font-size: 18px;
+    color: var(--primary-white-highlight);
+    font-size: 20px;
     font-weight: 600;
     float: right;
     text-align: left;
 }
 .navbar-nav li a:hover {
-    color: var(--primary-color-highlight);
-} 
+    color: var(--secondary-color);
+}
 .bi-list {
     color: white;
     font-size: 30px;
@@ -134,13 +169,105 @@ body {
 
 .navbar-toggler {
     outline: none !important;
+
+}
+.collapse.show {
+    position: relative;
+    z-index: 5;
+}
+/* Dropdown List */
+/* Hide Dropdown Arrow */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem; /* Ensure padding is consistent */
+    }
+
+    .navbar-brand img {
+        max-width: 160px; /* Adjust logo size for smaller screens */
+    }
+}
+.navbar-nav .dropdown-toggle::after {
+    display: none !important;
+
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: var(--bs-body-bg);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-/* ---------------Navbar-ends------------------------------ */
-/* -------------------------- Contact Page Layout -------------------------- */
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    color: var(--accent-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-.contact_container { /*changes done to make overflow visible/*
-    /* position: relative; */
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-white-highlight);
+}
+/* Underline Effect */
+.underline-effect:active {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
+.underline-effect:active::after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
+
+.underline-effect:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #eb6e00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c75a00;
+}
+
+.btn-secondary {
+    background-color: #333333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-outline-light {
+    border-color: #eb6e00;
+    color: var(--primary-white-highlight);
+    transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: black;
+    color: white;
+}   
+/* ---------------Navbar-ends------------------------------ */
+/* Contact  Section */
+.contact_container {
+    position: relative;
     width: 100%;
     height: 100vh;
     background: var(--bs-body-bg);
@@ -154,7 +281,7 @@ body {
     margin-top: 5vh;
     width: 100%;
     max-width: 820px;
-    background: white;
+    background: var(--primary-white-highlight);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     display: grid;
@@ -193,18 +320,18 @@ iframe {
 }
 
 .contact {
-    background: #2F3B4B;
+    background: var(--primary-color);
 }
 
 .submit_form {
-    background: #767677;
+    background: var(--accent-color);
     padding: 20px;
     height: 100%;
     /* changes done */
 }
 
 .first_text {
-    color: #FCFDFB;
+    color: var(--text-color);
     padding-left: 20px;
     padding-top: 20px;
     font-size: 35px;
@@ -317,9 +444,9 @@ textarea.input {
 .btn {
     position: relative;
     top: 100px;
-    background: white;
-    outline: none;
-    border: none;
+    /* background: white; */
+    /* outline: none; */
+    /* border: none; */
     border-radius: 4px;
     height: 45px;
     width: 30%;
@@ -414,7 +541,7 @@ textarea.input {
 /* ------------------------------ footer ------------------------------ */
 #footer {
     /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
-    background-color: #a2a2a8;
+    background-color: var(--accent-color);
     width: 100%;
     min-height: 250px;
 
@@ -430,8 +557,8 @@ textarea.input {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: whitesmoke;
+    font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-color);
 }
 
 .social-icons {
@@ -459,7 +586,7 @@ textarea.input {
     border: none;
     border-radius: 20px;
     padding: 8px 25px !important;
-    color: white;
+    color: var(--primary-white-highlight);
     font-weight: 500;
     font-size: 18px;
     transition: 0.3s;
@@ -468,10 +595,14 @@ textarea.input {
 }
 
 .copyright {
-    background-color: #a2a2a8;
-    color: white;
+    background-color: var(--accent-color);
     text-align: center;
+    color: var(--primary-white-highlight);
     padding: 10px 0;
     bottom: 0;
     width: 100%;
+}
+.copyright p {
+    color: var(--primary-color);
+    padding: 10px 0;
 }
