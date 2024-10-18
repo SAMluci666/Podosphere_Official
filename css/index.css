@@ -1,14 +1,16 @@
 :root {
     /* --primary-color: #EB6E00; */
-    --primary-color: #eb6e00;           
-    --primary-color-highlight: #4a90e2; 
+    --primary-color: #eb6e00;
+    --primary-color-highlight: #4a90e2;
     --primary-white-highlight: #ffffff;
-    --secondary-color: #000000; /*for buttons*/
+    --secondary-color: #000000;
+    /*for buttons*/
 
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
     --accent-color: #333333;
-    --text-color: #333333;  /*for readablility*/
+    --text-color: #333333;
+    /*for readablility*/
 }
 
 /* body{
@@ -38,17 +40,18 @@ a {
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: var(--primary-white-highlight);
-  line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: var(--primary-white-highlight);
+    line-height: 1.6;
 }
+
 /* a:hover {
     color: var(--primary-color-highlight);
 } */
@@ -66,30 +69,35 @@ p {
     /* background-image: linear-gradient(to right, var(--primary-color),var(--primary-color-highlight)); */
     /* background-color: transparent; */
     padding: 0 !important;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;   
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 /* Transparent navbar on hero section */
 .navbar-transparent {
     background-color: transparent;
     box-shadow: none;
 }
+
 /* Navbar styling when scrolling past hero section */
 .navbar-colored {
-    background: linear-gradient(135deg, #eb6e00, #444444 70%, #000000 90%); /* Your desired background color */
+    background: linear-gradient(135deg, #eb6e00, #444444 70%, #000000 90%);
+    /* Your desired background color */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    
+
 }
+
 .navbar .sticky-top {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
 /* For making sure the logo and toggle are in same line */
 /* .navbar>.container-fluid 
 {
     flex-wrap: nowrap;
 } */
-.navbar-brand{
+.navbar-brand {
     display: flex;
     align-items: center;
     width: auto;
@@ -112,9 +120,11 @@ p {
     float: right;
     text-align: left;
 }
+
 .navbar-nav li a:hover {
     color: var(--secondary-color);
-} 
+}
+
 .bi-list {
     color: white;
     font-size: 30px;
@@ -122,27 +132,33 @@ p {
 
 .navbar-toggler {
     outline: none !important;
-    
+
 }
+
 .collapse.show {
     position: relative;
     z-index: 5;
 }
+
 /* Dropdown List */
 /* Hide Dropdown Arrow */
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 2rem; /* Ensure padding is consistent */
+        padding: 1rem 2rem;
+        /* Ensure padding is consistent */
     }
 
     .navbar-brand img {
-        max-width: 160px; /* Adjust logo size for smaller screens */
+        max-width: 160px;
+        /* Adjust logo size for smaller screens */
     }
 }
+
 .navbar-nav .dropdown-toggle::after {
     display: none !important;
-    
+
 }
+
 /* Dropdown Menu Styling */
 .dropdown-menu {
     background-color: var(--bs-body-bg);
@@ -161,13 +177,15 @@ p {
     background-color: var(--secondary-color);
     color: var(--primary-white-highlight);
 }
+
 /* Underline Effect */
 .underline-effect::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: #FFD700; /* Gold underline */
+    background: #FFD700;
+    /* Gold underline */
     transition: width 0.3s;
     bottom: -5px;
     left: 0;
@@ -175,7 +193,8 @@ p {
 }
 
 .underline-effect:hover::after {
-    width: 100%; /* Full underline on hover */
+    width: 100%;
+    /* Full underline on hover */
 }
 
 /* Buttons */
@@ -186,28 +205,29 @@ p {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: #c75a00;
-  }
-  
-  .btn-secondary {
+}
+
+.btn-secondary {
     background-color: #333333;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-  }
-  .btn-outline-light {
-      border-color: #eb6e00;
-      color: var(--primary-white-highlight);
-      transition: 0.3s;
-  }
-  
-  .btn-outline-light:hover {
-      background-color: black;
-      color: white;
-  }
+}
+
+.btn-outline-light {
+    border-color: #eb6e00;
+    color: var(--primary-white-highlight);
+    transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: black;
+    color: white;
+}
 
 /* ---------------Navbar-ends------------------------------ */
 
@@ -273,12 +293,12 @@ p {
     z-index: 2;
     text-align: center;
 } */
- .hero__parent{
+.hero__parent {
     display: flex;
     flex: 2
-    
- }
- .hero__logo {
+}
+
+.hero__logo {
     position: absolute;
     right: 200px;
     bottom: 0;
@@ -291,7 +311,8 @@ p {
     width: 100%;
     aspect-ratio: 2/3;
 }
-.content-container{
+
+.content-container {
     display: flex;
     /* flex-direction: row; */
     /* justify-self: start; */
@@ -299,7 +320,7 @@ p {
     margin: 0 auto;
     padding: 0 2rem;
 
- }
+}
 
 .hero__content {
     display: flex;
@@ -310,6 +331,7 @@ p {
     margin: auto;
     z-index: 3;
 }
+
 @media (min-width: 1400px) {
     .hero__heading {
         font-size: 4.2rem;
@@ -329,10 +351,12 @@ p {
     margin-bottom: 40px;
     color: var(--text-color);
 }
+
 .hero__tagline-keyword {
     color: var(--secondary-color);
     font-weight: bold;
 }
+
 .hero__tagline-content {
     font-size: 1.2rem;
     text-align: center;
@@ -340,7 +364,7 @@ p {
     color: var(--text-color);
 }
 
-.text-color{
+.text-color {
     color: var(--text-color);
 }
 
@@ -390,23 +414,27 @@ p {
         transform: translateY(-10px);
     }
 }
+
 /* ----------------------Hero Section Ends--------------------- */
 /* ----------------------Explore Section----------------------- */
-        /* Responsive */
-        @media (max-width: 768px) {
-            .tagline {
-                font-size: 2rem;
-            }
-            .card-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .event-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-        }
+/* Responsive */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
 /* Tagline */
 .tagline {
     text-align: center;
@@ -426,39 +454,81 @@ p {
 
 .card {
     position: relative;
-
     width: 300px;
     /* height: 230px; */
-
     padding: 20px;
     margin: 10px;
-
-    border: .5px solid #E1E1E1;
+    border: 0.5px solid #E1E1E1;
     border-radius: 14px;
     box-sizing: border-box;
-    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--primary-white-highlight);
-
-    display: flex; 
+    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-
     overflow: hidden;
     cursor: pointer;
-    transition: .3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Include smooth transition */
 }
-.card p{
+
+.card p {
     font-size: 1.2rem;
     color: var(--text-color);
     /* width: 100%; */
 }
 
+.card h3 {
+    color: var(--primary-color);
+    /* Orange accent for titles */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    width: 100%;
+    /* Full width for the images */
+    height: 250px;
+    /* Increased height for larger image */
+    object-fit: cover;
+    /* Ensure images fill the area without distortion */
+    border-bottom: 2px solid #eee;
+}
+
+.card p {
+    margin: 10px;
+    text-align: justify;
+    /* Justify the text */
+}
+
 .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    /* Background turns black on hover */
+    color: white;
+    
 }
+.card:hover p {
+    color: white;
+    /* Ensure paragraph text also turns white */
+}
+.card:hover h3 {
+    color: white;
+    /* Change heading color to white on hover */
+}
+.card-link {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit text color from parent */
+    display: block;
+    /* Make the entire card clickable */
+    height: 100%;
+    /* Ensure the link fills the card */
+}
+
 /* ----------------------Explore Section Ends------------------ */
 /* ----------------------Networking Section Starts------------ */
 
@@ -511,22 +581,25 @@ p {
     background-color: #2ed573;
     color: white;
 }
+
 /* Partners Section */
-        /* Footer Section */
-        .partners-section {
-            background-color: #5D9CEC;
-            padding: 40px 0;
-            color: #fff;
-            text-align: center;
-        }
-        .partner-logos {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .partner-logos .logo {
-            background-color: #fff;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
+/* Footer Section */
+.partners-section {
+    background-color: #5D9CEC;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-logos .logo {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

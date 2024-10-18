@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your CSS styles here */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .hiring-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            padding: 10px 0;
+            scrollbar-width: thin; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer and Edge */
+        }
+
+        .card-container::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+
+        .card {
+            flex: 0 0 auto; /* Prevents card from shrinking */
+            width: 200px; /* Set a fixed width for each card */
+            margin: 0 15px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .apply-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background-color: #004494;
+        }
+
+        .blogging-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .blog-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 150px; /* Adjust card width for smaller screens */
+            }
+
+            .apply-button, .read-more {
+                font-size: 14px; /* Adjust button size for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hiring-section">
+        <div class="container">
+            <h2>Hiring by Top Companies</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Web Developer</h3>
+                    <p>Company: ABC Tech</p>
+                    <p>Type: Full-Time</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+                <div class="card">
+                    <h3>Data Science Intern</h3>
+                    <p>Company: XYZ Analytics</p>
+                    <p>Type: Internship</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+                <div class="card">
+                    <h3>Graphic Designer</h3>
+                    <p>Company: Creative Studio</p>
+                    <p>Type: Freelance</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+                <div class="card">
+                    <h3>Digital Marketing Intern</h3>
+                    <p>Company: Marketing Agency</p>
+                    <p>Type: Internship</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+                <div class="card">
+                    <h3>Software Engineer</h3>
+                    <p>Company: Tech Innovations</p>
+                    <p>Type: Full-Time</p>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+
+            <div class="blogging-section">
+                <h2>Latest Blogs</h2>
+                <div class="blog-card">
+                    <h3>How to Ace Your Job Interview</h3>
+                    <p>Get tips on how to prepare for your job interview and impress the hiring manager.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>Top 10 Skills Employers Are Looking For</h3>
+                    <p>Discover the most in-demand skills that can boost your job prospects.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>Building a Strong Resume</h3>
+                    <p>Learn how to create a resume that stands out from the competition.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <!-- Add more blog cards as needed -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
