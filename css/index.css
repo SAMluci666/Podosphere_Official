@@ -253,17 +253,9 @@ p {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
-.btn-primary:hover {
-}
-
 .btn-primary:hover {
     background-color: #c75a00;
 }
-
-.btn-secondary {
-}
-
 .btn-secondary {
     background-color: #333333;
     color: #fff;
@@ -369,8 +361,6 @@ p {
     padding: 0 2rem;
 
 }
-}
-
 .hero__content {
     display: flex;
     flex-direction: column;
@@ -421,7 +411,7 @@ p {
 }
 
 .hero__content-width {
-    max-width: 640px;
+    max-width: 740px;
 }
 
 .hero__content-description {
@@ -572,7 +562,6 @@ p {
     }
 
 }
-=========
 .card:hover p {
     color: white;
     /* Ensure paragraph text also turns white */
@@ -591,8 +580,6 @@ p {
     height: 100%;
     /* Ensure the link fills the card */
 }
-
->>>>>>>>> Temporary merge branch 2
 /* ----------------------Explore Section Ends------------------ */
 /* ----------------------Networking Section Starts------------ */
 
@@ -658,27 +645,6 @@ p {
     background-color: #2ed573;
     color: white;
 }
-
-/* Partners Section */
-/* Footer Section */
-.partners-section {
-    background-color: #5D9CEC;
-    padding: 40px 0;
-    color: #fff;
-    text-align: center;
-}
-.partner-logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.partner-logos .logo {
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
 /* Footer */
 #footer {
     /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
