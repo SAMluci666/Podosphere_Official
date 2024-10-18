@@ -257,10 +257,10 @@ div {
     color: #333333;
     margin-bottom: 40px;
 }
-.events__upcoming{
-    /* width: 100vw; */
-    /* height: 100vh; */
-}
+/* .events__upcoming{
+    width: 100vw;
+    height: 100vh;
+} */
 /* Event Cards Styles */
 .event-card {
     border: none;
