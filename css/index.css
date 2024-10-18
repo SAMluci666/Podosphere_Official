@@ -2,6 +2,8 @@
     /* --primary-color: #EB6E00; */
     --primary-color: #eb6e00;
     --primary-color-highlight: #4a90e2;
+    --primary-color: #eb6e00;
+    --primary-color-highlight: #4a90e2;
     --primary-white-highlight: #ffffff;
     --secondary-color: #000000;
     /*for buttons*/
@@ -59,9 +61,16 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: var(--primary-white-highlight);
+    line-height: 1.6;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: var(--primary-white-highlight);
@@ -88,6 +97,7 @@ p {
 .navbar {
     background: var(--accent-color);
     padding: 0 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -150,6 +160,7 @@ p {
 .navbar-toggler {
     outline: none !important;
 
+
 }
 
 .collapse.show {
@@ -173,6 +184,7 @@ p {
 
 .navbar-nav .dropdown-toggle::after {
     display: none !important;
+
 
 }
 
@@ -215,6 +227,17 @@ p {
     left: 0;
     z-index: 10
 }
+.underline-effect:active::after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
 
 .underline-effect:hover::after {
     width: 100%;
@@ -232,7 +255,13 @@ p {
 }
 
 .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: #c75a00;
+}
+
+.btn-secondary {
 }
 
 .btn-secondary {
@@ -339,6 +368,7 @@ p {
     margin: 0 auto;
     padding: 0 2rem;
 
+}
 }
 
 .hero__content {
@@ -542,6 +572,27 @@ p {
     }
 
 }
+=========
+.card:hover p {
+    color: white;
+    /* Ensure paragraph text also turns white */
+}
+.card:hover h3 {
+    color: white;
+    /* Change heading color to white on hover */
+}
+.card-link {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit text color from parent */
+    display: block;
+    /* Make the entire card clickable */
+    height: 100%;
+    /* Ensure the link fills the card */
+}
+
+>>>>>>>>> Temporary merge branch 2
 /* ----------------------Explore Section Ends------------------ */
 /* ----------------------Networking Section Starts------------ */
 
