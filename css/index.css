@@ -337,8 +337,8 @@ p {
 .hero__logo {
     position: absolute;
     right: 200px;
-    bottom: 0;
-    max-width: 400px;
+    bottom: 200px;
+    max-width: 200px;
     height: auto;
     width: 100%;
 }
@@ -498,7 +498,7 @@ p {
 
     display: flex;
     flex-direction: column;
-    /* text-align: center;      */
+    text-align: center;     
     align-items: center;
     /* justify-content: center; */
 
