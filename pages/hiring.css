@@ -4,14 +4,207 @@
     --primary-color-highlight: #4a90e2;
     --primary-white-highlight: #ffffff;
     --secondary-color: #000000;
-    /*for buttons*/
 
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
     --accent-color: #333333;
     --text-color: #333333;
-    /*for readablility*/
 }
+/* navbar  */
+#nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.navbar__container {
+    flex-wrap: nowrap;
+}
+
+.navbar {
+    background: var(--accent-color);
+    padding: 0 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Transparent navbar on hero section */
+.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Navbar styling when scrolling past hero section */
+.navbar-colored {
+    background: var(--accent-color); /* Your desired background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* For making sure the logo and toggle are in same line */
+/* .navbar>.container-fluid 
+{
+    flex-wrap: nowrap;
+} */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.navbar-brand img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: var(--primary-white-highlight);
+    font-size: 20px;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.navbar-nav li a:hover {
+    color: var(--primary-color);
+}
+.bi-list {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar-toggler {
+    outline: none !important;
+
+
+}
+
+.collapse.show {
+    position: relative;
+    z-index: 5;
+}
+
+/* Dropdown List */
+/* Hide Dropdown Arrow */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+        /* Ensure padding is consistent */
+    }
+
+    .navbar-brand img {
+        max-width: 160px;
+        /* Adjust logo size for smaller screens */
+    }
+}
+
+.navbar-nav .dropdown-toggle::after {
+    display: none !important;
+
+
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: var(--bs-body-bg);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    color: var(--accent-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-white-highlight);
+}
+.underline-effect:active {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700; /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
+.underline-effect:active::after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
+.underline-effect:active::after {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    /* Gold underline */
+    transition: width 0.3s;
+    bottom: -5px;
+    left: 0;
+    z-index: 10
+}
+
+.underline-effect:hover::after {
+    width: 100%;
+    /* Full underline on hover */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #eb6e00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #c75a00;
+}
+.btn-secondary {
+    background-color: #333333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-outline-light {
+    border-color: #eb6e00;
+    color: var(--primary-white-highlight);
+    transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ---------------Navbar-ends--
+
+/* ---------------------------->>>>> General Styles <<<<<<------------------------ */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -22,7 +215,7 @@ body {
 .hiring-section {
     padding: 60px 20px;
     background-color: #ffffff;
-    /* border-top: 5px solid #ff6f20; Orange accent */
+    border-top: 5px solid #ff6f20; /* Orange accent */
 }
 
 .container {
@@ -31,12 +224,13 @@ body {
     padding: 0 15px;
 }
 
-h2 {
+h1 {
     text-align: center;
     color: #ff6f20; /* Orange */
     font-size: 2.5em;
     margin-bottom: 40px;
     text-transform: uppercase; /* Make it more attractive */
+    margin-top: 145px;
 }
 
 /* Job Cards Section */
@@ -57,7 +251,6 @@ h2 {
     flex: 0 0 auto;
     width: 220px;
     padding: 20px;
-    margin: 0 15px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -88,6 +281,18 @@ h2 {
     background-color: #000;
     color: white;
 }
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    /* Background turns black on hover */
+    color: white;
+    
+}
+.card:hover p {
+    color: white;
+    /* Ensure paragraph text also turns white */
+}
 
 .apply-button {
     display: inline-block;
@@ -108,17 +313,17 @@ h2 {
 }
 
 /* Blogs Section */
-.blogging-section {
+/* .blogging-section {
     margin-top: 60px;
     text-align: center;
 }
 
 .blogging-section h2 {
     font-size: 2.5em;
-    color: #ff6f20; /* Orange */
-}
+    color: #ff6f20;
+} */
 
-.blog-card {
+/* .blog-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -137,7 +342,7 @@ h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007bff; /* Blue for contrast */
+    background-color: #007bff; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -146,7 +351,7 @@ h2 {
 
 .read-more:hover {
     background-color: #0056b3;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -165,15 +370,7 @@ h2 {
         width: auto;
     }
 }
-@media (max-width: 600px) {
-    .card {
-        width: 150px; /* Adjust card width for smaller screens */
-    }
 
-    .apply-button, .read-more {
-        font-size: 14px; /* Adjust button size for smaller screens */
-    }
-}
 @media (max-width: 480px) {
     .card {
         width: 100%;
@@ -183,4 +380,67 @@ h2 {
     .read-more {
         font-size: 0.9em;
     }
+}
+/* ------------------------------ footer ------------------------------ */
+#footer {
+    /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
+    background: var(--accent-color);
+    width: 100%;
+    min-height: 250px;
+color: white;
+}
+
+/* #footer p {
+    color: black;
+} */
+
+.footer-heading {
+    /* text-align: center; */
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.newsletter {
+    /* color: black; */
+    padding: 0px;
+}
+
+.btn-newsletter {
+    box-shadow: none !important;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 25px !important;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+    top: 10px;
+}
+
+.copyright {
+    background-color: var(--accent-color);;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
 }
