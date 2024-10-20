@@ -13,7 +13,6 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link Home Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!-- Google Fonts -->
@@ -34,7 +33,7 @@
                 // When scrolling past the hero section
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-colored');
-                navbar.classList.remove('sticky-top');
+                navbar.classList.remove('sticky-top');na
             } else {
                 // When within the hero section
                 navbar.classList.remove('navbar-colored');
@@ -51,8 +50,8 @@
     <!----------------------Navbar---------------------------->
     <section id="nav-bar">
         <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid py-3">
-                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
+            <div class="container-fluid py-3"> 
+                <a class="navbar-brand" href="/"><img src="assets/images/logo/logo-without-bg-cropped.png" class=""
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
                     aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation"
@@ -66,7 +65,7 @@
                 <div class="collapse navbar-collapse" id="navigation-bar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="">HOME</a>
+                            <a class="nav-link" href="index.html">HOME</a>
                         </li>
                         <!-- Dropdown Mentorship -->
                         <li class="nav-item dropdown">
@@ -74,9 +73,9 @@
                                 MENTORSHIP
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="Live connect.html">Live Connect</a></li>
+                                <li><a class="dropdown-item" href="pages/events.html">Live Connect</a></li>
                                 <li><a class="dropdown-item" href="pages/events.html">Upcoming Events</a></li>
-                                <li><a class="dropdown-item" href="Events.html#past-events">Past Events</a></li>
+                                <li><a class="dropdown-item" href="pages/events.html">Past Events</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -84,13 +83,13 @@
                             </ul>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="#about-us">COURSES</a>
+                            <a class="nav-link " href="/pages/courses1.html">COURSES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="pages/events.html">EVENTS</a>
+                            <a class="nav-link " href="/pages/events.html">EVENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="pages/Hiring.html">HIRING</a>
+                            <a class="nav-link " href="/pages/Hiring.html">HIRING</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#faq">ABOUT</a>
@@ -128,7 +127,7 @@
                 </div>
             </div>
             <div class="hero__logo justify-content-sm-end">
-                <img class="img-fluid" src="assets/images/temp_avatar.jpg" alt="">
+                <img class="img-fluid" src="/assets/images/mascot-no-bg.png" alt="">
             </div>
 
         </div>
@@ -153,40 +152,43 @@
 
     <section id="explore-card" class="container card-container py-4 ">
         <div class="row scroll_animation">
-            <div class="col-md-6 col-12 col-lg-3 ">
-                <div class="card" style="background-color: #FFECB3;">
-                    <h3>Courses</h3>
-                    <p>Unlock your potential with our curated courses designed to equip you with essential skills.
-                    </p>
-                </div>
+            <div class="col-md-6 col-12 col-lg-3 card">
+                <a href="/pages/Hiring.html" class="card-link">
+                    <img src="assets/images/hiring-r.png" alt="Hiring" class="card-image">
+                    <h3>Hiring</h3>
+                    <p>Explore job opportunities and internships from top companies. Your dream job is a click away!</p>
+                </a>
             </div>
-            <div class="col-md-6 col-12 col-lg-3">
-                <div class="card" style="background-color: #FFE0B2;">
+            <div class="col-md-6 col-12 col-lg-3 card">
+                <a href="#" class="card-link">
+                    <img src="assets/images/Mentor-r.png" alt="Mentorship" class="card-image">
                     <h3>Mentorship</h3>
                     <p>Connect with experienced professionals who provide personalized advice and support.</p>
-                </div>
+                </a>
             </div>
-            <div class="col-md-6 col-12 col-lg-3">
-                <div class="card" style="background-color: #FFCCBC;">
-                    <h3>Hiring</h3>
-                    <p>Explore job opportunities and internships from top companies. Your dream job is a click away!
-                    </p>
-                </div>
+            <div class="col-md-6 col-12 col-lg-3 card">
+                <a href="/pages/courses1.html" class="card-link">
+                    <img src="assets/images/coursing.png" alt="Courses" class="card-image">
+                    <h3>Courses</h3>
+                    <p>Unlock your potential with our curated courses designed to equip you with essential skills.</p>
+                </a>
             </div>
-            <div class="col-md-6 col-12 col-lg-3">
-                <div class="card" style="background-color: #FFAB91;">
+            <div class="col-md-6 col-12 col-lg-3 card">
+                <a href="/pages/events.html" class="card-link">
+                    <img src="/assets/images/Networking.png" alt="Networking Events" class="card-image">
                     <h3>Networking Events</h3>
-                    <p>Have questions? Visit our Contact Us page to reach out. We’re here to help you.</p>
-                </div>
+                    <p>Connect with professionals at events designed to build your network and open new opportunities.
+                    </p>
+                </a>
             </div>
         </div>
 
     </section>
 
     <!-- Networking Events Section -->
-    <section id="events scroll_animation ">
-        <h2 class="text-center section__heading">Networking Events</h2>
-        <div class="event-cards scroll_animation">
+    <section id="events">
+        <h2 class="text-center section__heading"section__heading>Networking Events</h2>
+        <div class="event-cards">
             <div class="network-card card">
                 <h3>Professional UI/UX Design</h3>
                 <p>Become a professional UI/UX Designer in 6 months with Designwings.</p>
@@ -199,18 +201,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Partners Section -->
-    <section id="our-partners" class="partners-section">
-        <h2>Our Partners</h2>
-        <div class="partner-logos">
-            <div class="logo">Brand A</div>
-            <div class="logo">Brand B</div>
-            <div class="logo">Brand C</div>
-            <div class="logo">Brand D</div>
-        </div>
-    </section>
-
      <!--------------------------Footer----------------------->
      <section id="footer">
         <div class="container-fluid">
@@ -243,10 +233,10 @@
                         <!-- <<a href="https://github.com/Podosphere-online"><img src=""></a> -->
                         <a
                             href="https://www.instagram.com/podosphere.online?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
-                                src="../assets/icons/instagram-icon.png"></a>
+                                src="assets/icons/instagram-icon.png"></a>
                         <!-- <a href="#"><img src=""></a> -->
                         <a href="https://www.linkedin.com/company/tekin-atz/#"><img
-                                src="../assets/icons/facebook-icon.png"></a>
+                                src="assets/icons/facebook-icon.png"></a>
                         <!-- <a href="#"><img src=""></a> -->
                     </div>
                     <div class="col-md-1"></div>
