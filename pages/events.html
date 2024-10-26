@@ -22,14 +22,14 @@
         rel="stylesheet">
 
     <!-- Java Script  -->
-    <!-- <script>
+    <script>
         // JavaScript to handle scroll and navbar background change
         window.addEventListener('scroll', function () {
             var navbar = document.getElementById('navbar');
-            var heroSection = document.querySelector('.hero');
-            var heroBottom = heroSection.offsetHeight;  // Height of the hero section
+            var eventHeading = document.querySelector('.header');
+            var eventBottom = eventHeading.offsetHeight;  // Height of the hero section
 
-            if (window.scrollY > heroBottom) {
+            if (window.scrollY > eventBottom) {
                 // When scrolling past the hero section
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-colored');
@@ -42,13 +42,13 @@
             }
         });
 
-    </script> -->
+    </script>
 </head>
 <body>
     <header>
         <section id="nav-bar">
-            <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-                <div class="container-fluid py-3"> 
+            <nav id="navbar" class="navbar navbar-expand-lg">
+                <div class="container-fluid py-3 container__navbar"> 
                     <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
                             alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
@@ -63,12 +63,12 @@
                     <div class="collapse navbar-collapse" id="navigation-bar">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/index.html">HOME</a>
+                                <a class="nav-link" href="/index.html">Home</a>
                             </li>
                             <!-- Dropdown Mentorship -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    MENTORSHIP
+                                    Mentorship
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="pages/events.html">Live Connect</a></li>
@@ -81,29 +81,32 @@
                                 </ul>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link " href="/pages/courses1.html">COURSES</a>
+                                <a class="nav-link " href="/pages/courses1.html">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/events.html">EVENTS</a>
+                                <a class="nav-link " href="/pages/events.html">Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/Hiring.html">HIRING</a>
+                                <a class="nav-link " href="/pages/Hiring.html">Hiring</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#faq">ABOUT</a>
+                                <a class="nav-link " href="#faq">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/contact.html">CONTACT</a>
+                                <a class="nav-link " href="#faq">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/pages/contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </section>
-        <div class="header">
+        <!-- <div class="header">
             <h1>OUR EVENTS</h1>
             <h4>Events to keep you in SYNK </h4>
-        </div>
+        </div> -->
     </header>
     <main>
         <section id="events" class="events-section">
@@ -265,7 +268,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1"></div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <!-- Newsletter -->
                     <h5 class="footer-heading">Subscribe to our Newsletter</h5>
                     <form action="http://localhost:3000/newsletter" method="POST">
@@ -277,14 +280,12 @@
                         <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
                     </form>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h5 class="footer-heading">Contacts</h5>
                     <p>
                         <bold>support@podosphere.com</bold> <br>
                         <bold>+91 99999999</bold>
                     </p>
-                    <p>Address: Racecourse Rd, near Gola ka Mandir, Mela Ground, Thatipur, Gwalior, Madhya Pradesh PIN :
-                        474005</p>
                 </div>
                 <div class="col-md-2">
                     <h5 class="footer-heading">Socials</h5>
@@ -298,7 +299,16 @@
                                 src="../assets/icons/facebook-icon.png"></a>
                         <!-- <a href="#"><img src=""></a> -->
                     </div>
-                    <div class="col-md-1"></div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/courses1.html">Courses</a></li>
+                        <li><a href="/pages/events.html">Events</a></li>
+                        <li><a href="/pages/Hiring.html">Hiring</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
 
