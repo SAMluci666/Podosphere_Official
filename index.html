@@ -41,6 +41,27 @@
                 navbar.classList.add('sticky-top');
             }
         });
+        document.addEventListener('DOMContentLoaded', function () {
+        const scrollBtn = document.querySelector('.hero__scroll-btn');
+        const initialScale = 1; // Initial scale
+        const maxScale = 3; // Maximum scale when scrolling
+    
+        window.addEventListener('scroll', function () {
+            const scrollY = window.scrollY; // Current scroll position
+            const scale = Math.min(maxScale, initialScale + scrollY / 200); // Scale based on scroll
+            scrollBtn.style.transform = `translateX(-50%) scale(${scale})`; // Apply scale transformation
+        });
+    
+        scrollBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default anchor behavior
+            const target = document.querySelector(scrollBtn.getAttribute('href')); // Get the target section
+    
+            // Smooth scroll to the target section
+            target.scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    });
 
     </script>
 </head>
@@ -141,7 +162,7 @@
         <!--* The Scroll Down Arrow -->
         <a href="#explore-card" class="hero__scroll-btn">
             Explore <i class="bi bi-arrow-down-short"></i>
-        </a>
+        </a>    
     </section>
     <!-- Tagline
         <div class="tagline">
