@@ -9,6 +9,8 @@
 
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
+    --navbar-font-family: 'Roboto', sans-serif;
+    --card-font-family: 'Inter', sans-serif;
     --accent-color: #333333;
     --text-color: #333333;
     /*for readablility*/
@@ -58,6 +60,7 @@ html {
     display: flex;
     justify-content: center;
     /* align-items: center; */
+    font-family: var(--navbar-font-family);
     
     margin-top: 10px;
     /* position: sticky; */
@@ -282,6 +285,7 @@ div {
     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     color: var(--bs-card-color);
     height: 275px;
+    font-family: var(--card-font-family);
 }
 .event-card:hover {
     transform: translateY(-5px);
@@ -433,6 +437,8 @@ div {
 
 .social-icons {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap   ;
 }
 
 .social-icons img {
@@ -474,4 +480,15 @@ div {
 .copyright p {
     color: var(--primary-color);
     /* padding:     10px 0; */
+}
+.footer-links{
+    list-style-type: none;
+}
+.footer-links li a{
+    text-decoration: none;
+    color: var(--primary-white-highlight);   
+}
+
+.footer-links li a:hover{
+    color: var(--primary-color);
 }
