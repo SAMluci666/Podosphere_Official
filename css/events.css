@@ -11,7 +11,7 @@
     --bs-body-font-family: 'Montserrat', sans-serif;
     --navbar-font-family: 'Roboto', sans-serif;
     --card-font-family: 'Inter', sans-serif;
-    --accent-color: #333333;
+    --accent-color: #2b2b2b;
     --text-color: #333333;
     /*for readablility*/
 }
@@ -27,7 +27,7 @@ body{
     display: none;      
 }
 p {
-    font-family: 'Montserrat', 'Lato', sans-serif;
+    font-family: var(--bs-body-font-family);
     font-weight: 300;
     color: var(--primary-white-highlight);
     line-height: 1.6;
@@ -46,6 +46,12 @@ html {
 @media (min-width: 1600px) {}   
 
 */
+.active{    
+    /* background-color: var(--primary-color); */
+    color: var(--primary-white-highlight);
+    border-bottom: 2px solid black !important;
+}
+
 /* -------------------Navbar------------------------- */
 #nav-bar {
     /* position: sticky;
@@ -124,7 +130,7 @@ html {
 }
 
 .navbar-nav li a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .bi-list {
     color: white;
@@ -195,24 +201,11 @@ html {
     width: 0;
     height: 2px;
     background: #FFD700;
-    /* Gold underline */
     transition: width 0.3s;
     bottom: -5px;
     left: 0;
     z-index: 10
 }
-.underline-effect:active::after {
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FFD700;
-    /* Gold underline */
-    transition: width 0.3s;
-    bottom: -5px;
-    left: 0;
-    z-index: 10
-}
-
 .underline-effect:hover::after {
     width: 100%;
     /* Full underline on hover */
@@ -320,12 +313,12 @@ div {
     height: 100vh; /* Take full viewport height */
     position: relative
 
-}
+}   
 .carousel-inner, .carousel-item {
-    height: 100vh; /* Ensure the inner items take full height */
+    height: 95vh; /* Ensure the inner items take full height */
 }   
 .carousel-content {
-    height: 100vh;
+    height: 95vh;
     object-fit: cover; /* Cover the entire carousel area without stretching */
 }
 
@@ -337,7 +330,7 @@ div {
 
 .carousel-caption {
     position: absolute;
-    bottom:10%;
+    bottom:5%;
     left: 10%;
     right: 10%;
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */

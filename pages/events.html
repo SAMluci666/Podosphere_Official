@@ -41,7 +41,19 @@
                 navbar.classList.add('sticky-top');
             }
         });
+            //Javascript to handle active and innactive navbar
+            const navLinks = document.querySelectorAll('.navlink');
 
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        // Remove the 'active' class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // Add the 'active' class to the clicked link
+        this.classList.add('active');
+        this.classList.add('underline-effect');
+    });
+});
     </script>
 </head>
 <body>
@@ -63,11 +75,11 @@
                     <div class="collapse navbar-collapse" id="navigation-bar">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/index.html">Home</a>
+                                <a class="nav-link" id="home" href="/index.html">Home</a>
                             </li>
                             <!-- Dropdown Mentorship -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Mentorship
                                 </a>
                                 <ul class="dropdown-menu">
@@ -81,22 +93,22 @@
                                 </ul>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link " href="/pages/courses1.html">Courses</a>
+                                <a class="nav-link " id="courses" href="/pages/courses1.html">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/events.html">Events</a>
+                                <a class="nav-link " id="events" href="/pages/events.html">Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/Hiring.html">Hiring</a>
+                                <a class="nav-link " id="hiring" href="/pages/Hiring.html">Hiring</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#faq">About</a>
+                                <a class="nav-link " id="about" href="#faq">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#faq">Blog</a>
+                                <a class="nav-link " id="blog" href="#faq">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/pages/contact.html">Contact</a>
+                                <a class="nav-link " id="contact" href="/pages/contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>

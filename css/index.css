@@ -2,20 +2,19 @@
     /* --primary-color: #EB6E00; */
     --primary-color: #eb6e00;
     --primary-color-highlight: #4a90e2;
-    --primary-color: #eb6e00;
-    --primary-color-highlight: #4a90e2;
     --primary-white-highlight: #ffffff;
     --secondary-color: #000000;
     /*for buttons*/
 
     --bs-body-bg: #FBF0F6;
     --bs-body-font-family: 'Montserrat', sans-serif;
+    --bs-body-font-family: 'Montserrat', sans-serif;
+    --navbar-font-family: 'Roboto', sans-serif;
+    --card-font-family: 'Inter', sans-serif;
     --accent-color: #2b2b2b;
     --text-color: #333333;  /*for readablility*/
 }
-/* view{
 
-} */
 @keyframes appear {
     from{
         opacity: 0;
