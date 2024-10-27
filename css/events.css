@@ -15,27 +15,6 @@
     --text-color: #333333;
     /*for readablility*/
 }
-body{
-    margin-top: -20px;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.hidden-scrollbar::-webkit-scrollbar {
-    display: none;      
-}
-p {
-    font-family: var(--bs-body-font-family);
-    font-weight: 300;
-    color: var(--primary-white-highlight);
-    line-height: 1.6;
-}
-html {
-    scroll-behavior: smooth;
-}
-
 /* Media Queries for Responsive Designing */
 /*
 @media (min-width: 544px) {}
@@ -46,6 +25,24 @@ html {
 @media (min-width: 1600px) {}   
 
 */
+body{
+    margin-top: -20px;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;      
+}
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-family: var(--bs-body-font-family);
+    font-weight: 300;
+    color: var(--primary-white-highlight);
+    line-height: 1.6;
+}
+
+
+
 .active{    
     /* background-color: var(--primary-color); */
     color: var(--primary-white-highlight);
@@ -76,7 +73,7 @@ html {
 }
 .container__navbar{
     background-color: var(--primary-color);
-    width: 80%;
+    width: 95%;
     border-radius: 50px;
     margin: 20px;
 
@@ -118,9 +115,11 @@ html {
 }
 
 .navbar-nav li {
-    padding: 0 5px;
+    padding: 0 10px;
 }
-
+#contact{
+    padding-right: 15px;
+}
 .navbar-nav li a {
     color: var(--primary-white-highlight);
     font-size: 20px;
@@ -315,7 +314,7 @@ div {
 
 }   
 .carousel-inner, .carousel-item {
-    height: 95vh; /* Ensure the inner items take full height */
+    height: 90vh; /* Ensure the inner items take full height */
 }   
 .carousel-content {
     height: 95vh;
@@ -430,13 +429,13 @@ div {
 
 .social-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: nowrap   ;
 }
 
 .social-icons img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transition: 0.5s;
     /* margin-top: 50px; */
 }
