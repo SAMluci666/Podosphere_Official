@@ -17,78 +17,96 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="/css/hiring.css">
+    <link rel="stylesheet" href="/css/events.css">
     
 </head>
 
-<body>
+<body class="hidden-scrollbar">
     <!----------------------Navbar---------------------------->
-    <section id="nav-bar">
-      <nav class="navbar navbar-expand-lg ">
-          <div class="container-fluid py-4">
-              <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                  aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                      class="bi bi-list" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd"
-                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                  </svg>
-              </button>
-              <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="/index.html">HOME</a>
-                  </li>
-                  <!-- Dropdown Mentorship -->
-                  <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          MENTORSHIP
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="pages/events.html">Live Connect</a></li>
-                          <li><a class="dropdown-item" href="pages/events.html">Upcoming Events</a></li>
-                          <li><a class="dropdown-item" href="pages/events.html">Past Events</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
+    <header>
+      <section id="nav-bar">
+          <nav id="navbar" class="navbar navbar-expand-lg">
+              <div class="container-fluid py-3 container__navbar">
+                  <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
+                          alt=""></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false"
+                      aria-label="Toggle navigation" onclick="colorfulNavbar()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                          class="bi bi-list" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                      </svg>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navigation-bar">
+                      <ul class="navbar-nav ms-auto">
+                          <li class="nav-item">
+                              <a class="nav-link" id="home" href="/index.html">Home</a>
                           </li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <!-- Dropdown Mentorship -->
+                          <li class="nav-item dropdown">
+                              <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  Mentorship
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="/pages/mentor.html">Live Connect</a></li>
+                                  <li><a class="dropdown-item" href="/pages/events.html">Upcoming Events</a></li>
+                                  <li><a class="dropdown-item" href="/pages/events.html">Past Events</a></li>
+                                  <li>
+                                      <hr class="dropdown-divider">
+                                  </li>
+                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item ">
+                              <a class="nav-link " id="courses" href="/pages/courses1.html">Courses</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " id="events" href="/pages/events.html">Events</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " id="hiring" href="/pages/Hiring.html">Hiring</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " id="about" href="#faq">About</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " id="blog" href="/pages/blogs.html">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " id="contact" href="/pages/contact.html">Contact</a>
+                          </li>
                       </ul>
-                  </li>
-                  <li class="nav-item ">
-                      <a class="nav-link " href="/pages/courses1.html">COURSES</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link " href="/pages/events.html">EVENTS</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link " href="/pages/Hiring.html">HIRING</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link " href="#faq">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link " href="/pages/contact.html">CONTACT</a>
-                  </li>
-              </ul>
+                  </div>
               </div>
-          </div>
-      </nav>
-  </section>
+          </nav>
+      </section>
+      <!-- <div class="header">
+          <h1>OUR EVENTS</h1>
+          <h4>Events to keep you in SYNK </h4>
+      </div> -->
+  </header>
     <!--------------------------------------- navbar end ------------------------>
     <section class="hiring-section">
         <div class="container">
-            <h1>Hiring by Top Companies</h1>
+            <h1 class="section-header">Hiring by Top Companies</h1>
             <div class="card-container">
                 <div class="card">
                     <h3>Web Developer</h3>
-                    <p>Company: ABC Tech</p>
-                    <p>Type: Full-Time</p>
+                    <div class="text-container">
+                      <p>Company: ABC Tech</p>
+                      <p>Type: Full-Time</p>
+                    </div>
+                  
                     <a href="#" class="apply-button">Apply Now</a>
                 </div>
                 <div class="card">
                     <h3>Data Science Intern</h3>
-                    <p>Company: XYZ Analytics</p>
-                    <p>Type: Internship</p>
+                    <div class="text-container">
+                      <p>Company: XYZ Analytics</p>
+                      <p>Type: Internship</p>
+                    </div>
                     <a href="#" class="apply-button">Apply Now</a>
                 </div>
                 <div class="card">
@@ -294,51 +312,72 @@
     </div>
   </div> -->
     </section>
-    <!----------------------------------------- Footer Section ------------------------------------------------------>
-    <section id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <form action="http://localhost:3000/newsletter" method="POST">
-                        <div class="form-floating newsletter">
-                            <input type="email" name="email" class="form-control" id="floatingInput"
-                                placeholder="name@example.com" required>
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-heading">Contacts</h5>
-                    <p>
-                        <strong>support@podosphere.com</strong><br>
-                        <strong>+91 99999999</strong>
-                    </p>
-                    <p>Address: Racecourse Rd, near Gola ka Mandir, Mela Ground, Thatipur, Gwalior, Madhya Pradesh PIN: 474005</p>
-                </div>
-                <div class="col-md-2">
-                    <h5 class="footer-heading">Socials</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/podosphere.online">
-                            <img src="../assets/icons/instagram-icon.png" alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/tekin-atz">
-                            <img src="../assets/icons/facebook-icon.png" alt="Facebook">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-        <div class="copyright">
-            <!-- <p class="footer-heart">
-                Made with <span class="heart">❤</span> in India 
-            </p> -->
-            <p>&copy; 2024 Synk IN. All rights reserved.</p>
-        </div>
-    </section>
+    <footer>
+      <!--------------------------Footer----------------------->
+      <section id="footer">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-1 col-lg-1"></div>
+                  <div class="col-md-5 col-lg-3">
+                      <!-- Newsletter -->
+                      <h5 class="footer-heading">Subscribe to our Newsletter</h5>
+                      <form action="http://localhost:3000/newsletter" method="POST">
+                          <div class="form-floating mb-3 newsletter">
+                              <input type="email" name="email" class="form-control" id="floatingInput"
+                                  placeholder="name@example.com">
+                              <label for="floatingInput">Email address</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
+                      </form>
+                  </div>
+                  <div class="col-md-5 col-sm-4 col-lg-2">
+                      <h5 class="footer-heading">Contacts</h5>
+                      <p>
+                          <bold>support@SyncIN.com</bold> <br>
+                          <bold>+91 99999999</bold>
+                      </p>
+                  </div>
+                  <div class="col-md-6 col-sm-4 col-lg-2">
+                      <h5 class="footer-heading">Quick Links</h5>
+                      <ul class="footer-links">
+                          <li><a href="/index.html">Home</a></li>
+                          <li><a href="/pages/courses1.html">Courses</a></li>
+                          <li><a href="/pages/events.html">Events</a></li>
+                          <li><a href="/pages/Hiring.html">Hiring</a></li>
+                          <li><a href="/pages/contact.html">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 col-sm-4 col-lg-2">
+                      <h5 class="footer-heading">Socials</h5>
+                      <div class="social-icons">
+                          <a href="https://www.instagram.com/podosphere.online" target="_blank">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                  alt="Instagram">
+                          </a>
+                          <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                  alt="LinkedIn">
+                          </a>
+                          <a href="https://t.me/yourtelegramhandle" target="_blank">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                                  alt="Telegram">
+                          </a>
+                          <a href="https://wa.me/yourwhatsapplink" target="_blank">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                  alt="WhatsApp">
+                          </a>
+
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="copyright">
+              <hr>
+              <p>&copy; 2024 SyncIN</p>
+          </div>
+      </section>
+  </footer>
     
 </body>
 

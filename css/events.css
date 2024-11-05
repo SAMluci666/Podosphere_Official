@@ -117,6 +117,33 @@ body{
     color: var(--primary-white-highlight);
 }
 /* Navbar Sections Ends Here */
+/*--------------- Buttons---------------------- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: var(--card-font-family);
+}
+
 .header {
     /* background-image: url(https://img.freepik.com/premium-photo/abstract-smooth-orange-background-layout-design-web-template-business-report-with-smooth-circle-gradient-color_1258-54654.jpg); */
     background-color: var(--accent-color);
@@ -241,32 +268,6 @@ body{
 }
 .carousel-control-prev, .carousel-control-next {
     width: 5%; /* Larger hitbox for controls */
-}
-/*--------------- Buttons---------------------- */
-.btn-primary {
-    background-color: var(--primary-color);
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-color);
-}
-
-.btn-secondary {
-    background-color: var(--primary-color);
-    border: none;
-}
-
-.btn-secondary:hover {
-    background-color: var(--accent-color);
-}
-
-.btn-primary, .btn-secondary {
-    padding: 12px 25px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 1.1rem;
-    font-family: var(--card-font-family);
 }
 
 /*-------------- Styling for Past Events------------------------ */

@@ -4,99 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Blogs</title>
     <!-- Link CSS -->
     <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="stylesheet" href="/css/events.css">
     <!-- Link Bootstrap CSS and JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- link Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Custom Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Libre Baskerville -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <!--  -->
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+       rel="stylesheet">
 
 </head>
-<body>
-    <header>
-        <section id="nav-bar">
-            <nav id="navbar" class="navbar navbar-expand-lg">
-                <div class="container-fluid py-3 container__navbar">
-                    <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
-                            alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false"
-                        aria-label="Toggle navigation" onclick="colorfulNavbar()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navigation-bar">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/index.html">Home</a>
-                            </li>
-                            <!-- Dropdown Mentorship -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Mentorship
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/events.html">Live Connect</a></li>
-                                    <li><a class="dropdown-item" href="pages/events.html">Upcoming Events</a></li>
-                                    <li><a class="dropdown-item" href="pages/events.html">Past Events</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link " href="/pages/courses1.html">Courses</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="/pages/events.html">Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="/pages/Hiring.html">Hiring</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="#faq">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="#faq">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="/pages/contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </section>
-        <!-- <div class="header">
-            <h1>OUR EVENTS</h1>
-            <h4>Events to keep you in SYNK </h4>
-        </div> -->
-    </header>
-
-
-
-
+<body class="hidden-scrollbar">
+<div data-include-html="/navbar.html"></div>
     <section class="blog-section">
         <div class="container">
             <div class="blog-header">
@@ -107,8 +36,7 @@
                 <div class="featuresofleft">
 
                     <article class="featured-post">
-                        <img src="/assets/images/courses1.jpeg"
-                            alt="Featured post">
+                        <img src="/assets/images/courses1.jpeg" alt="Featured post">
                         <div class="featured-content">
                             <span class="tag">Featured</span>
                             <h2>The Future of Web Development in 2024</h2>
@@ -217,71 +145,21 @@
             <button class="load-more">Load More Articles</button>
         </div>
     </section>
-
-
-    <!--------------------------Footer----------------------->
-    <section id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 col-lg-1"></div>
-                <div class="col-md-5 col-lg-3">
-                    <!-- Newsletter -->
-                    <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <form action="http://localhost:3000/newsletter" method="POST">
-                        <div class="form-floating mb-3 newsletter">
-                            <input type="email" name="email" class="form-control" id="floatingInput"
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-5 col-sm-4 col-lg-2">
-                    <h5 class="footer-heading">Contacts</h5>
-                    <p>
-                        <bold>support@podosphere.com</bold> <br>
-                        <bold>+91 99999999</bold>
-                    </p>
-                </div>
-                <div class="col-md-6 col-sm-4 col-lg-3">
-                    <h5 class="footer-heading">Socials</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/podosphere.online" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                                alt="LinkedIn">
-                        </a>
-                        <a href="https://t.me/yourtelegramhandle" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
-                                alt="Telegram">
-                        </a>
-                        <a href="https://wa.me/yourwhatsapplink" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                        </a>
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-4 col-lg-3">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/pages/courses1.html">Courses</a></li>
-                        <li><a href="/pages/events.html">Events</a></li>
-                        <li><a href="/pages/Hiring.html">Hiring</a></li>
-                        <li><a href="/pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Podosphere</p>
-        </div>
-    </section>
-    </footer>
+    <div data-include-html="/footer.html"></div>
+    <script>
+        function includeHTML() {
+            const elements = document.querySelectorAll("[data-include-html]");
+            elements.forEach(async (el) => {
+                const file = el.getAttribute("data-include-html");
+                const response = await fetch(file);
+                if (response.ok) {
+                    el.innerHTML = await response.text();
+                } else {
+                    el.innerHTML = "Content not found.";
+                }
+            });
+        }
+        includeHTML();
+    </script>
 </body>
-
 </html>
