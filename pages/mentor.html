@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,49 +13,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="mentor.css">
+    <link rel="stylesheet" href="/css/mentor.css">
 </head>
-<body>
+
+<body class="hidden-scrollbar">
     <!----------------------Navbar---------------------------->
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid py-4">
-                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+            <div class="container-fluid py-3 container__navbar">
+                <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
+                        alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
+                    aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation"
+                    onclick="colorfulNavbar()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar">
+                <div class="collapse navbar-collapse" id="navigation-bar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html">HOME</a>
+                            <a class="nav-link" id="home" href="/index.html">Home</a>
+                        </li>
+                        <!-- Dropdown Mentorship -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Mentorship
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/events.html">Live Connect</a></li>
+                                <li><a class="dropdown-item" href="pages/events.html">Upcoming Events</a></li>
+                                <li><a class="dropdown-item" href="pages/events.html">Past Events</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " id="courses" href="/pages/courses1.html">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about-us">ABOUT US</a>
+                            <a class="nav-link " id="events" href="/pages/events.html">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#events">EVENTS</a>
+                            <a class="nav-link " id="hiring" href="/pages/Hiring.html">Hiring</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                            <a class="nav-link " id="about" href="#faq">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#faq">FAQ</a>
+                            <a class="nav-link " id="blog" href="#faq">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">CONTACT</a>
+                            <a class="nav-link " id="contact" href="/pages/contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </section>
-
-    <section class="mentor-section">
+    <section class="mentor-section section">
         <div class="container">
             <div class="section-header">
                 <h2>Meet Our Expert Mentors</h2>
@@ -136,456 +156,235 @@
             </div>
         </div>
     </section>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Arial', sans-serif;
-            }
-
-            section {
-                padding: 80px 20px;
-            }
-
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
-            .section-header {
-                text-align: center;
-                margin-bottom: 60px;
-            }
-
-            .section-header h2 {
-                color: #ff6b00;
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-                transition: color 0.3s ease;
-            }
-
-            .section-header p {
-                color: #666;
-                max-width: 800px;
-                margin: 0 auto;
-                line-height: 1.6;
-            }
-
-            /* Feature Section */
-            .features {
-                background: #fff3e6;
-            }
-
-            .feature-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-            }
-
-            .feature-card {
-                background: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-                text-align: center;
-            }
-
-            .feature-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            }
-
-            .feature-icon {
-                font-size: 2.5rem;
-                color: #ff6b00;
-                margin-bottom: 20px;
-            }
-
-            .feature-title {
-                color: #333;
-                font-size: 1.3rem;
-                margin-bottom: 15px;
-            }
-
-            /* Benefits Section */
-            .benefits {
-                background: white;
-            }
-
-            .benefits-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-            }
-
-            .benefit-item {
-                display: flex;
-                align-items: flex-start;
-                gap: 20px;
-                padding: 20px;
-                border-radius: 10px;
-                transition: all 0.3s ease;
-            }
-
-            .benefit-item:hover {
-                background: #fff3e6;
-                transform: scale(1.02);
-            }
-
-            .benefit-icon {
-                font-size: 2rem;
-                color: #ff6b00;
-            }
-
-            .benefit-content h3 {
-                color: #333;
-                margin-bottom: 10px;
-            }
-
-            /* How It Works Section */
-            .how-it-works {
-                background: #fff3e6;
-            }
-
-            .steps {
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-                margin-top: 40px;
-            }
-
-            .step {
-                flex: 1;
-                text-align: center;
-                padding: 20px;
-                position: relative;
-                z-index: 1;
-            }
-
-            .step-number {
-                width: 50px;
-                height: 50px;
-                background: #ff6b00;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 20px;
-                font-size: 1.5rem;
-                transition: transform 0.3s ease;
-            }
-
-            .step:hover .step-number {
-                transform: scale(1.2);
-            }
-
-            .step h3 {
-                color: #333;
-                margin-bottom: 15px;
-            }
-
-            /* Testimonials Section */
-            .testimonials {
-                background: white;
-            }
-
-            .testimonial-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-            }
-
-            .testimonial-card {
-                background: #fff3e6;
-                padding: 30px;
-                border-radius: 10px;
-                transition: all 0.3s ease;
-                position: relative;
-            }
-
-            .testimonial-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            }
-
-            .quote {
-                font-size: 3rem;
-                color: #ff6b00;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                opacity: 0.2;
-            }
-
-            .testimonial-text {
-                color: #666;
-                font-style: italic;
-                margin-bottom: 20px;
-                position: relative;
-                z-index: 1;
-            }
-
-            .testimonial-author {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .author-avatar {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: #ff6b00;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-            }
-
-            .author-info h4 {
-                color: #333;
-                margin-bottom: 5px;
-            }
-
-            .author-info p {
-                color: #666;
-                font-size: 0.9rem;
-            }
-
-            @media (max-width: 1024px) {
-
-                .feature-grid,
-                .testimonial-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-
-            @media (max-width: 768px) {
-
-                .feature-grid,
-                .benefits-grid,
-                .testimonial-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .steps {
-                    flex-direction: column;
-                    gap: 30px;
-                }
-
-                .section-header h2 {
-                    font-size: 2rem;
-                }
-            }
-        </style>
-    </head>
-
-    <body>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Program Features</h2>
-                    <p>Discover the comprehensive features designed to accelerate your professional growth</p>
+    <!-- Features Section -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Program Features</h2>
+                <p>Discover the comprehensive features designed to accelerate your professional growth</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Personalized Matching</h3>
+                    <p>Get matched with mentors who align with your career goals and interests</p>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3 class="feature-title">Personalized Matching</h3>
-                        <p>Get matched with mentors who align with your career goals and interests</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💡</div>
-                        <h3 class="feature-title">Expert Guidance</h3>
-                        <p>Receive guidance from industry professionals with proven track records</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3 class="feature-title">Skill Development</h3>
-                        <p>Access resources and workshops to enhance your professional skills</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3 class="feature-title">Expert Guidance</h3>
+                    <p>Receive guidance from industry professionals with proven track records</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Skill Development</h3>
+                    <p>Access resources and workshops to enhance your professional skills</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="benefits">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Program Benefits</h2>
-                    <p>Experience the advantages of joining our mentorship program</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🌟</div>
-                        <div class="benefit-content">
-                            <h3>Career Acceleration</h3>
-                            <p>Fast-track your career growth with expert guidance and support</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🤝</div>
-                        <div class="benefit-content">
-                            <h3>Networking Opportunities</h3>
-                            <p>Connect with industry professionals and fellow mentees</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📈</div>
-                        <div class="benefit-content">
-                            <h3>Skill Enhancement</h3>
-                            <p>Develop new skills and strengthen existing ones</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🎯</div>
-                        <div class="benefit-content">
-                            <h3>Goal Achievement</h3>
-                            <p>Set and achieve your professional goals with structured guidance</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="how-it-works">
-            <div class="container">
-                <div class="section-header">
-                    <h2>How It Works</h2>
-                    <p>Join our mentorship program in four simple steps</p>
-                </div>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Sign Up</h3>
-                        <p>Create your profile and tell us about your goals</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Get Matched</h3>
-                        <p>We'll match you with the perfect mentor</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Connect</h3>
-                        <p>Schedule your first mentoring session</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Grow</h3>
-                        <p>Start your journey of growth and development</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Success Stories</h2>
-                    <p>Hear from our program participants about their experiences</p>
-                </div>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="quote">"</div>
-                        <p class="testimonial-text">The mentorship program completely transformed my career
-                            trajectory. My mentor's guidance was invaluable.</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">A</div>
-                            <div class="author-info">
-                                <h4>Kim Jong un</h4>
-                                <p>Dictator</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote">"</div>
-                        <p class="testimonial-text">I gained not just knowledge, but also confidence and a clear
-                            direction for my career path.</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">R</div>
-                            <div class="author-info">
-                                <h4>Khushi Jain</h4>
-                                <p>UX Designer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote">"</div>
-                        <p class="testimonial-text">The structured approach and expert guidance helped me achieve my
-                            goals faster than I expected.</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">M</div>
-                            <div class="author-info">
-                                <h4>Chen Kuli</h4>
-                                <p>Product Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-            <!----------------------------------------- Footer Section ------------------------------------------------------>
-    <section id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-5">
-                    <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <form action="http://localhost:3000/newsletter" method="POST">
-                        <div class="form-floating newsletter">
-                            <input type="email" name="email" class="form-control" id="floatingInput"
-                                placeholder="name@example.com" required>
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="footer-heading">Contacts</h5>
-                    <p>
-                        <strong>support@podosphere.com</strong><br>
-                        <strong>+91 99999999</strong>
-                    </p>
-                    <p>Address: Racecourse Rd, near Gola ka Mandir, Mela Ground, Thatipur, Gwalior, Madhya Pradesh PIN: 474005</p>
-                </div>
-                <div class="col-md-2">
-                    <h5 class="footer-heading">Socials</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/podosphere.online">
-                            <img src="../assets/icons/instagram-icon.png" alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/tekin-atz">
-                            <img src="../assets/icons/facebook-icon.png" alt="Facebook">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-        <div class="copyright">
-            <!-- <p class="footer-heart">
-                Made with <span class="heart">❤</span> in India 
-            </p> -->
-            <p>&copy; 2024 Synk IN. All rights reserved.</p>
         </div>
     </section>
-    </body>
 
-    </html>
+    <!-- Benefits Section -->
+    <section class="benefits section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Program Benefits</h2>
+                <p>Experience the advantages of joining our mentorship program</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌟</div>
+                    <div class="benefit-content">
+                        <h3>Career Acceleration</h3>
+                        <p>Fast-track your career growth with expert guidance and support</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <div class="benefit-content">
+                        <h3>Networking Opportunities</h3>
+                        <p>Connect with industry professionals and fellow mentees</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>Skill Enhancement</h3>
+                        <p>Develop new skills and strengthen existing ones</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Goal Achievement</h3>
+                        <p>Set and achieve your professional goals with structured guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- How It Works Section -->
+    <section class="how-it-works section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Join our mentorship program in four simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create your profile and tell us about your goals</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Matched</h3>
+                    <p>We'll match you with the perfect mentor</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Connect</h3>
+                    <p>Schedule your first mentoring session</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Grow</h3>
+                    <p>Start your journey of growth and development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>Hear from our program participants about their experiences</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p class="testimonial-text">The mentorship program completely transformed my career
+                        trajectory. My mentor's guidance was invaluable.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Kim Jong un</h4>
+                            <p>Dictator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p class="testimonial-text">I gained not just knowledge, but also confidence and a clear
+                        direction for my career path.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Khushi Jain</h4>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p class="testimonial-text">The structured approach and expert guidance helped me achieve my
+                        goals faster than I expected.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Chen Kuli</h4>
+                            <p>Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!--------------------------Footer----------------------->
+        <section id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1 col-lg-1"></div>
+                    <div class="col-md-5 col-lg-3">
+                        <!-- Newsletter -->
+                        <h5 class="footer-heading">Subscribe to our Newsletter</h5>
+                        <form action="http://localhost:3000/newsletter" method="POST">
+                            <div class="form-floating mb-3 newsletter">
+                                <input type="email" name="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Contacts</h5>
+                        <p>
+                            <bold>support@SyncIN.com</bold> <br>
+                            <bold>+91 99999999</bold>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/pages/courses1.html">Courses</a></li>
+                            <li><a href="/pages/events.html">Events</a></li>
+                            <li><a href="/pages/Hiring.html">Hiring</a></li>
+                            <li><a href="/pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Socials</h5>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/podosphere.online" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                    alt="Instagram">
+                            </a>
+                            <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                    alt="LinkedIn">
+                            </a>
+                            <a href="https://t.me/yourtelegramhandle" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                                    alt="Telegram">
+                            </a>
+                            <a href="https://wa.me/yourwhatsapplink" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                    alt="WhatsApp">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="copyright">
+                <hr>
+                <p>&copy; 2024 SyncIN</p>
+            </div>
+        </section>
+    </footer>
+    <script>
+        //Javascript to handle active and innactive navbar
+        const navLinks = document.querySelectorAll('.navlink');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove the 'active' class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Add the 'active' class to the clicked link
+                this.classList.add('active');
+                this.classList.add('underline-effect');
+            });
+        });
+    </script>
 </body>
 
 </html>

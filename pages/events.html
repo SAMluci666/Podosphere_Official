@@ -41,31 +41,32 @@
                 navbar.classList.add('sticky-top');
             }
         });
-            //Javascript to handle active and innactive navbar
-            const navLinks = document.querySelectorAll('.navlink');
+        //Javascript to handle active and innactive navbar
+        const navLinks = document.querySelectorAll('.navlink');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        // Remove the 'active' class from all links
-        navLinks.forEach(link => link.classList.remove('active'));
-        
-        // Add the 'active' class to the clicked link
-        this.classList.add('active');
-        this.classList.add('underline-effect');
-    });
-});
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove the 'active' class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Add the 'active' class to the clicked link
+                this.classList.add('active');
+                this.classList.add('underline-effect');
+            });
+        });
     </script>
 </head>
-<body>
+
+<body class="hidden-scrollbar">
     <header>
         <section id="nav-bar">
             <nav id="navbar" class="navbar navbar-expand-lg">
-                <div class="container-fluid py-3 container__navbar"> 
+                <div class="container-fluid py-3 container__navbar">
                     <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
                             alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
-                        aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation"
-                        onclick="colorfulNavbar()">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false"
+                        aria-label="Toggle navigation" onclick="colorfulNavbar()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -79,7 +80,8 @@ navLinks.forEach(link => {
                             </li>
                             <!-- Dropdown Mentorship -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     Mentorship
                                 </a>
                                 <ul class="dropdown-menu">
@@ -124,218 +126,228 @@ navLinks.forEach(link => {
         <section id="events" class="events-section">
             <div class="container">
                 <div class="events__upcoming">
-        
-                <!-- Upcoming Events Section -->
-                <h2 class="section-title text-center mb-5">Upcoming Events</h2>
-                <div class="row">
-                    <!-- Event 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Professional UI/UX Design Workshop</h5>
-                                <p class="card-text">Join us for a hands-on UI/UX design workshop. Learn the latest
-                                    design trends and improve your skills.</p>
-                                <p class="event-date">Date: December 18, 2024</p>
-                                <a href="#" class="btn btn-primary">Register Now</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Event 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Full Stack Web Development Bootcamp</h5>
-                                <p class="card-text">A comprehensive bootcamp to become a full-stack developer. Hands-on
-                                    coding and projects included.</p>
-                                <p class="event-date">Date: January 10, 2025</p>
-                                <a href="#" class="btn btn-primary">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Event 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Digital Marketing Webinar</h5>
-                                <p class="card-text">Discover effective digital marketing strategies for growing your
-                                    business in 2024 and beyond.</p>
-                                <p class="event-date">Date: February 2, 2025</p>
-                                <a href="#" class="btn btn-primary">Sign Up</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="section-title text-center mt-5 mb-5">Past Events</h2>
-                <div id="pastEventsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <!-- Carousel Item 1 -->
-                        <div class="carousel-item active">
-                            <div class="carousel-content">
-                                <img src="https://via.placeholder.com/600x300" class="d-block w-100" alt="Past Event 1">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Introduction to Machine Learning</h5>
-                                    <p>A successful event. Date: Nov 5, 2023</p>
-                                    <a href="#" class="btn btn-secondary">View Details</a>
+                    <!-- Upcoming Events Section -->
+                    <h2 class="section-header text-center mb-5">Upcoming Events</h2>
+                    <div class="row">
+                        <!-- Event 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Professional UI/UX Design Workshop</h5>
+                                    <p class="card-text">Join us for a hands-on UI/UX design workshop. Learn the latest
+                                        design trends and improve your skills.</p>
+                                    <p class="event-date">Date: December 18, 2024</p>
+                                    <a href="#" class="btn btn-primary">Register Now</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Carousel Item 2 -->
-                        <div class="carousel-item">
-                            <div class="carousel-content">
-                                <img src="https://via.placeholder.com/400x250" class="d-block w-100" alt="Past Event 2">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>AI in Healthcare Conference</h5>
-                                    <p>Exploring AI's role in healthcare. Date: Oct 22, 2023</p>
-                                    <a href="#" class="btn btn-secondary">View Details</a>
+
+                        <!-- Event 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Stack Web Development Bootcamp</h5>
+                                    <p class="card-text">A comprehensive bootcamp to become a full-stack developer.
+                                        Hands-on
+                                        coding and projects included.</p>
+                                    <p class="event-date">Date: January 10, 2025</p>
+                                    <a href="#" class="btn btn-primary">Join Now</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Carousel Item 3 -->
-                        <div class="carousel-item">
-                            <div class="carousel-content">
-                                <img src="https://via.placeholder.com/400x250" class="d-block w-100" alt="Past Event 3">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Cloud Computing Workshop</h5>
-                                    <p>Hands-on workshop. Date: Sep 15, 2023</p>
-                                    <a href="#" class="btn btn-secondary">View Details</a>
+
+                        <!-- Event 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Event Image 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Digital Marketing Webinar</h5>
+                                    <p class="card-text">Discover effective digital marketing strategies for growing
+                                        your
+                                        business in 2024 and beyond.</p>
+                                    <p class="event-date">Date: February 2, 2025</p>
+                                    <a href="#" class="btn btn-primary">Sign Up</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#pastEventsCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#pastEventsCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            <div class="events__past">
-                
-       
-                <!-- Past Events Section -->
-                <h2 class="section-title text-center mt-5 mb-5">Past Events</h2>
-                <div class="row">
-                    <!-- Past Event 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card past-event">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top"
-                                alt="Past Event Image 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Introduction to Machine Learning</h5>
-                                <p class="card-text">A successful event covering the basics of Machine Learning with
-                                    hands-on projects.</p>
-                                <p class="event-date">Date: November 5, 2023</p>
-                                <a href="#" class="btn btn-secondary">View Details</a>
+                    <h2 class="section-header text-center mt-5 mb-5">Past Events</h2>
+                    <div id="pastEventsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Carousel Item 1 -->
+                            <div class="carousel-item active">
+                                <div class="carousel-content">
+                                    <img src="https://via.placeholder.com/600x300" class="d-block w-100"
+                                        alt="Past Event 1">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Introduction to Machine Learning</h5>
+                                        <p>A successful event. Date: Nov 5, 2023</p>
+                                        <a href="#" class="btn btn-secondary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel Item 2 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="https://via.placeholder.com/400x250" class="d-block w-100"
+                                        alt="Past Event 2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>AI in Healthcare Conference</h5>
+                                        <p>Exploring AI's role in healthcare. Date: Oct 22, 2023</p>
+                                        <a href="#" class="btn btn-secondary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel Item 3 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="https://via.placeholder.com/400x250" class="d-block w-100"
+                                        alt="Past Event 3">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Cloud Computing Workshop</h5>
+                                        <p>Hands-on workshop. Date: Sep 15, 2023</p>
+                                        <a href="#" class="btn btn-secondary">View Details</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Past Event 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card past-event">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top"
-                                alt="Past Event Image 2">
-                            <div class="card-body">
-                                <h5 class="card-title">AI in Healthcare Conference</h5>
-                                <p class="card-text">Exploring the future of AI in healthcare, with speakers from
-                                    leading tech companies.</p>
-                                <p class="event-date">Date: October 22, 2023</p>
-                                <a href="#" class="btn btn-secondary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Past Event 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card event-card past-event">
-                            <img src="https://via.placeholder.com/400x250" class="card-img-top"
-                                alt="Past Event Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Cloud Computing Workshop</h5>
-                                <p class="card-text">A hands-on workshop covering cloud infrastructure, deployment, and
-                                    scaling strategies.</p>
-                                <p class="event-date">Date: September 15, 2023</p>
-                                <a href="#" class="btn btn-secondary">View Details</a>
-                            </div>
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pastEventsCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pastEventsCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-            </div>
+                <div class="events__past">
+
+
+                    <!-- Past Events Section -->
+                    <h2 class="section-header text-center mt-5 mb-5">Past Events</h2>
+                    <div class="row">
+                        <!-- Past Event 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card past-event">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top"
+                                    alt="Past Event Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Introduction to Machine Learning</h5>
+                                    <p class="card-text">A successful event covering the basics of Machine Learning with
+                                        hands-on projects.</p>
+                                    <p class="event-date">Date: November 5, 2023</p>
+                                    <a href="#" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Past Event 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card past-event">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top"
+                                    alt="Past Event Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">AI in Healthcare Conference</h5>
+                                    <p class="card-text">Exploring the future of AI in healthcare, with speakers from
+                                        leading tech companies.</p>
+                                    <p class="event-date">Date: October 22, 2023</p>
+                                    <a href="#" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Past Event 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card event-card past-event">
+                                <img src="https://via.placeholder.com/400x250" class="card-img-top"
+                                    alt="Past Event Image 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cloud Computing Workshop</h5>
+                                    <p class="card-text">A hands-on workshop covering cloud infrastructure, deployment,
+                                        and
+                                        scaling strategies.</p>
+                                    <p class="event-date">Date: September 15, 2023</p>
+                                    <a href="#" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <footer>
+        <!--------------------------Footer----------------------->
+        <section id="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1 col-lg-1"></div>
+                    <div class="col-md-5 col-lg-3">
+                        <!-- Newsletter -->
+                        <h5 class="footer-heading">Subscribe to our Newsletter</h5>
+                        <form action="http://localhost:3000/newsletter" method="POST">
+                            <div class="form-floating mb-3 newsletter">
+                                <input type="email" name="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Contacts</h5>
+                        <p>
+                            <bold>support@SyncIN.com</bold> <br>
+                            <bold>+91 99999999</bold>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/pages/courses1.html">Courses</a></li>
+                            <li><a href="/pages/events.html">Events</a></li>
+                            <li><a href="/pages/Hiring.html">Hiring</a></li>
+                            <li><a href="/pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-lg-2">
+                        <h5 class="footer-heading">Socials</h5>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/podosphere.online" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                    alt="Instagram">
+                            </a>
+                            <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                    alt="LinkedIn">
+                            </a>
+                            <a href="https://t.me/yourtelegramhandle" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                                    alt="Telegram">
+                            </a>
+                            <a href="https://wa.me/yourwhatsapplink" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                    alt="WhatsApp">
+                            </a>
 
- 
-     <!--------------------------Footer----------------------->
-     <section id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 col-lg-1"></div>
-                <div class="col-md-5 col-lg-3">
-                    <!-- Newsletter -->
-                    <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <form action="http://localhost:3000/newsletter" method="POST">
-                        <div class="form-floating mb-3 newsletter">
-                            <input type="email" name="email" class="form-control" id="floatingInput"
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-5 col-sm-4 col-lg-2">
-                    <h5 class="footer-heading">Contacts</h5>
-                    <p>
-                        <bold>support@podosphere.com</bold> <br>
-                        <bold>+91 99999999</bold>
-                    </p>
-                </div>
-              
-                <div class="col-md-6 col-sm-4 col-lg-3">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/pages/courses1.html">Courses</a></li>
-                        <li><a href="/pages/events.html">Events</a></li>
-                        <li><a href="/pages/Hiring.html">Hiring</a></li>
-                        <li><a href="/pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-sm-4 col-lg-3">
-                    <h5 class="footer-heading">Socials</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/podosphere.online" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://t.me/yourtelegramhandle" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-                        </a>
-                        <a href="https://wa.me/yourwhatsapplink" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                        </a>
-                        
                     </div>
                 </div>
+
             </div>
-            
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Podosphere</p>
-        </div>
-    </section>
-</footer>
+            <div class="copyright">
+                <hr>
+                <p>&copy; 2024 SyncIN</p>
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>
