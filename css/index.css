@@ -682,7 +682,9 @@ body {
     font-weight: 500;
     color: var(--primary-color);
 }
-
+.footer-content{
+    text-align: center;;
+}
 .social-icons {
     display: flex;
     justify-content: space-evenly;

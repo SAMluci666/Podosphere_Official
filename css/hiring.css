@@ -277,7 +277,9 @@ body{
     font-weight: 500;
     color: var(--primary-color);
 }
-
+.footer-content{
+    text-align: center;;
+}
 .social-icons {
     display: flex;
     justify-content: space-evenly;
@@ -319,10 +321,12 @@ body{
     padding-bottom: 1px;
     width: 100%;
 }
+
 .copyright p {
     color: var(--primary-color);
 }
-.footer-links{
+
+.footer-links {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -330,16 +334,18 @@ body{
     /* align-items: center; */
     font-weight: 400;
 }
-.footer-links li a{
+
+.footer-links li a {
     text-decoration: none;
-    color: var(--primary-white-highlight);   
+    color: var(--primary-white-highlight);
 }
 
-.footer-links li a:hover{
+.footer-links li a:hover {
     color: var(--primary-color);
 }
-hr{
-    padding: 5px; 
-    margin: 0px auto; 
+
+hr {
+    padding: 5px;
+    margin: 0px auto;
     color: var(--primary-color-highlight);
 }
