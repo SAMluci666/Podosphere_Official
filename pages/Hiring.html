@@ -16,97 +16,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="hiring.css">
   <link rel="stylesheet" href="/css/hiring.css">
-  <link rel="stylesheet" href="/css/events.css">
 
 </head>
 
-<body class="hidden-scrollbar">
-  <!----------------------Navbar---------------------------->
-  <header>
-    <section id="nav-bar">
-      <nav id="navbar" class="navbar navbar-expand-lg">
-        <div class="container-fluid py-3 container__navbar">
-          <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
-              alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
-            aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation"
-            onclick="colorfulNavbar()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-          </button>
-          <div class="collapse navbar-collapse" id="navigation-bar">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" id="home" href="/index.html">Home</a>
-              </li>
-              <!-- Dropdown Mentorship -->
-              <li class="nav-item dropdown">
-                <a class="nav-link " id="mentorship" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Mentorship
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pages/mentor.html">Live Connect</a></li>
-                  <li><a class="dropdown-item" href="/pages/events.html">Upcoming Events</a></li>
-                  <li><a class="dropdown-item" href="/pages/events.html">Past Events</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link " id="courses" href="/pages/courses1.html">Courses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " id="events" href="/pages/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " id="hiring" href="/pages/Hiring.html">Hiring</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " id="about" href="#faq">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " id="blog" href="/pages/blogs.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " id="contact" href="/pages/contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </section>
-    <!-- <div class="header">
-          <h1>OUR EVENTS</h1>
-          <h4>Events to keep you in SYNK </h4>
-      </div> -->
-  </header>
+<body>
+
   <!--------------------------------------- navbar end ------------------------>
-  <section class="hiring-section">
+  <!-- <section class="hiring-section">
     <div class="container">
-      <h1 class="section-header">Hiring by Top Companies</h1>
+      <div class="section-header">
+        <h1>"Discover Your Next Opportunity
+        </h1>
+        <p>Explore roles that match your skills and ambitions. Join the team and make a meaningful impact .</p>
+      </div>
+      <h1>Hiring by Top Companies</h1>
       <div class="card-container">
         <div class="card">
           <h3>Web Developer</h3>
-          <div class="text-container">
-            <p>Company: ABC Tech</p>
-            <p>Type: Full-Time</p>
-          </div>
-
+          <p>Company: ABC Tech</p>
+          <p>Type: Full-Time</p>
           <a href="#" class="apply-button">Apply Now</a>
         </div>
         <div class="card">
           <h3>Data Science Intern</h3>
-          <div class="text-container">
-            <p>Company: XYZ Analytics</p>
-            <p>Type: Internship</p>
-          </div>
+          <p>Company: XYZ Analytics</p>
+          <p>Type: Internship</p>
           <a href="#" class="apply-button">Apply Now</a>
         </div>
         <div class="card">
@@ -127,9 +63,93 @@
           <p>Type: Full-Time</p>
           <a href="#" class="apply-button">Apply Now</a>
         </div>
+      </div> -->
+  <section class="section courses-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hiring by Top Companies</h2>
+        <p>Learn new skills and advance your career with these amazing courses.</p>
       </div>
 
-      <!-- <div class="blogging-section">
+      <div class="courses-grid">
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3>Software Engineer at Oracle</h3>
+            <p>Learn the fundamentals of HTML, CSS, and JavaScript to build your first website.</p>
+            <div class="course-info">
+              <span>Oracle </span>
+              <button class="enroll-button">Apply Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3> SDE-2 at PayPal</h3>
+            <p>Dive deep into React and learn how to build modern, interactive user interfaces.</p>
+            <div class="course-info">
+              <span>PayPal </span>
+              <button class="enroll-button">Apply Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3>Data Analyst</h3>
+            <p>Explore the power of D3.js and create stunning, interactive data visualizations.</p>
+            <div class="course-info">
+              <span>Adobe </span>
+              <button class="enroll-button">Apply Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3>Blockachain Enginner</h3>
+            <p>Get started with machine learning and learn how to build intelligent applications.</p>
+            <div class="course-info">
+              <span>Blackrock </span>
+              <button class="enroll-button">Apply Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3>SDE-2</h3>
+            <p>Take your Python skills to the next level and learn advanced programming concepts.</p>
+            <div class="course-info">
+              <span>Citadel </span>
+              <button class="enroll-button">Apply Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="/api/placeholder/400/300" alt="Course Thumbnail">
+          <div class="course-content">
+            <h3>DevOps Engineer</h3>
+            <p>Discover the techniques and best practices for creating responsive, mobile-friendly websites.
+            </p>
+            <div class="course-info">
+              <span>By Ayan</span>
+              <button class="enroll-button">Apple</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="enroll-button">View All Jobs</button>
+    </div>
+  </section>
+  <!-- <div class="blogging-section">
                 <h2>Latest Blogs</h2>
                 <div class="blog-card">
                     <h3>How to Ace Your Job Interview</h3>
@@ -148,8 +168,8 @@
                 </div>
             </div>
         </div> -->
-      <!-----RECENT JOB SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
-      <!-- <div class="width-100 recent-job">
+  <!-----RECENT JOB SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
+  <!-- <div class="width-100 recent-job">
     <div class="container">
       <h2 class="recent-job-heading">RECENT JOB</h2>
       <p class="recent-job-sub-heading">Get the list of all recent jobs</p>
@@ -179,8 +199,8 @@
           </div>
         </div>
       </div> -->
-      <!-----JOB LIST------>
-      <!-- <div class="width-50">
+  <!-----JOB LIST------>
+  <!-- <div class="width-50">
         <div class="recent-job-list">
           <div class="width-100">
             <h4 class="job-title">CSS Designer</h4>
@@ -205,8 +225,8 @@
           </div>
         </div>
       </div> -->
-      <!-----JOB LIST----->
-      <!-- <div class="width-50">
+  <!-----JOB LIST----->
+  <!-- <div class="width-50">
         <div class="recent-job-list">
           <div class="width-100">
             <h4 class="job-title">Bootstrap Developer</h4>
@@ -231,8 +251,8 @@
           </div>
         </div>
       </div> -->
-      <!-----JOB LIST----->
-      <!-- <div class="width-50">
+  <!-----JOB LIST----->
+  <!-- <div class="width-50">
         <div class="recent-job-list">
           <div class="width-100">
             <h4 class="job-title">Javascript Developer</h4>
@@ -257,8 +277,8 @@
           </div>
         </div>
       </div> -->
-      <!-----JOB LIST----->
-      <!-- <div class="width-50">
+  <!-----JOB LIST----->
+  <!-- <div class="width-50">
         <div class="recent-job-list">
           <div class="width-100">
             <h4 class="job-title">Graphic Designer</h4>
@@ -283,8 +303,8 @@
           </div>
         </div>
       </div> -->
-      <!-- ---JOB LIST---- -->
-      <!-- <div class="width-50">
+  <!-- ---JOB LIST---- -->
+  <!-- <div class="width-50">
         <div class="recent-job-list">
           <div class="width-100">
             <h4 class="job-title">jQuery Developer</h4>
@@ -312,76 +332,52 @@
     </div>
   </div> -->
   </section>
-  <footer>
-    <!--------------------------Footer----------------------->
-    <section id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 col-lg-1"></div>
-                <div class="col-md-5 col-lg-3">
-                    <!-- Newsletter -->
-                    <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                    <form action="http://localhost:3000/newsletter" method="POST">
-                        <div class="form-floating mb-3 newsletter">
-                            <input type="email" name="email" class="form-control" id="floatingInput"
-                                placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <button type="submit" class="btn-primary btn-newsletter">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-5 col-sm-4 col-lg-2">
-                    <h5 class="footer-heading">Contacts</h5>
-                    <div class="footer-content">
-                        <p>
-                            <bold>support@SyncIN.com</bold> <br>
-                            <bold>+91 99999999</bold>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="col-md-6 col-sm-4 col-lg-2">
-                    <h5 class="footer-heading">Quick Links</h5>
-                    <div class="footer-content">
-                        <ul class="footer-links">
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="/pages/courses1.html">Courses</a></li>
-                            <li><a href="/pages/events.html">Events</a></li>
-                            <li><a href="/pages/Hiring.html">Hiring</a></li>
-                            <li><a href="/pages/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-4 col-lg-2">
-                    <h5 class="footer-heading">Socials</h5>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/podosphere.online" target="_blank">
-                            <img src="/assets/icons/instagram.png"
-                                alt="Instagram">
-                        </a>
-                        <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
-                            <img src="/assets/icons/linkedin.png"
-                                alt="LinkedIn">
-                        </a>
-                        <a href="https://t.me/yourtelegramhandle" target="_blank">
-                            <img src="/assets/icons/telegram.png"
-                                alt="Telegram">
-                        </a>
-                        <a href="https://wa.me/yourwhatsapplink" target="_blank">
-                            <img src="/assets/icons/whatsapp.png"
-                                alt="WhatsApp">
-                        </a>
-                    </div>
-                </div>
+  <!----------------------------------------- Footer Section ------------------------------------------------------>
+  <section id="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <h5 class="footer-heading">Subscribe to our Newsletter</h5>
+          <form action="http://localhost:3000/newsletter" method="POST">
+            <div class="form-floating newsletter">
+              <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                required>
+              <label for="floatingInput">Email address</label>
             </div>
-
+            <button type="submit" class="btn btn-primary btn-newsletter">Submit</button>
+          </form>
         </div>
-        <div class="copyright">
-            <hr>
-            <p>&copy; 2024 SyncIN</p>
+        <div class="col-md-3">
+          <h5 class="footer-heading">Contacts</h5>
+          <p>
+            <strong>support@podosphere.com</strong><br>
+            <strong>+91 99999999</strong>
+          </p>
+          <p>Address: Racecourse Rd, near Gola ka Mandir, Mela Ground, Thatipur, Gwalior, Madhya Pradesh PIN: 474005</p>
         </div>
-    </section>
-</footer>
+        <div class="col-md-2">
+          <h5 class="footer-heading">Socials</h5>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/podosphere.online">
+              <img src="../assets/icons/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/tekin-atz">
+              <img src="../assets/icons/facebook-icon.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <div class="copyright">
+      <!-- <p class="footer-heart">
+                Made with <span class="heart">❤</span> in India 
+            </p> -->
+      <p>&copy; 2024 Synk IN. All rights reserved.</p>
+    </div>
+  </section>
 
 </body>
 
