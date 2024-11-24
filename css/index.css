@@ -60,41 +60,74 @@ body {
 }
 
 /* -------------------Navbar------------------------- */
+#nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
 .navbar {
-    display: flex;
-    justify-content: center;
-    font-family: var(--navbar-font-family) !important;
+    background: var(--accent-color);
+    padding: 0 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.container__navbar{
-    background-color: var(--primary-color);
-    width: 95%;
-    border-radius: 50px;
-    margin: 20px;
+
+/* Transparent navbar on hero section */
+.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
 }
+
+/* Navbar styling when scrolling past hero section */
+.navbar-colored {
+    background: var(--accent-color);
+    /* Your desired background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+
 .navbar .sticky-top {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+
+/* For making sure the logo and toggle are in same line */
+/* .navbar>.container-fluid 
+{
+    flex-wrap: nowrap;
+} */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
 .navbar-brand img {
-    width: 80%;
-    max-width: 220px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
 }
+
 .navbar-nav li {
     padding: 0 10px;
 }
-#contact{
-    padding-right: 15px;
-}
+
 .navbar-nav li a {
     color: var(--primary-white-highlight);
     font-size: 20px;
     font-weight: 600;
+    float: right;
+    text-align: left;
 }
+
 .navbar-nav li a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
+
 .bi-list {
     color: white;
     font-size: 30px;
@@ -102,34 +135,43 @@ body {
 
 .navbar-toggler {
     outline: none !important;
+
+
 }
 
 .collapse.show {
     position: relative;
     z-index: 5;
 }
-/* 
+
+/* Dropdown List */
+/* Hide Dropdown Arrow */
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem 2rem;
+        /* Ensure padding is consistent */
     }
 
     .navbar-brand img {
         max-width: 160px;
+        /* Adjust logo size for smaller screens */
     }
-} */
+}
 
 .navbar-nav .dropdown-toggle::after {
     display: none !important;
+
+
 }
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
-    background-color: var(--primary-color);
+    background-color: var(--bs-body-bg);
     border: none;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
 /* Dropdown Items */
 .dropdown-menu .dropdown-item {
     color: var(--accent-color);
@@ -140,7 +182,8 @@ body {
     background-color: var(--secondary-color);
     color: var(--primary-white-highlight);
 }
-/* Navbar Sections Ends Here */
+
+/* --------------Navbar Sections Ends -------------------------- */
 /* ----------------- Buttons ------------------- */
 .btn-primary {
     background-color: #eb6e00;
