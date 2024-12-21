@@ -20,7 +20,7 @@ const createSendToken = (user, statusCode, res) => {
 	};
 	if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
-	res.cookie("jwt", token, cookieOptions);
+	res.cookie("access-token", token, cookieOptions);
 
 	user.password = undefined;
 
@@ -71,9 +71,12 @@ exports.logout = catchAsync(async (req, res, next) => {
 
 exports.protect = catchAsync(async (req, res, next) => {
 	let token;
+	const authorization = req.cookies["access-token"]
+		? `Bearer ${req.cookies["access-token"]}`
+		: req.headers.authorization;
 
-	if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
-		token = req.headers.authorization.split(" ")[1];
+	if (authorization && authorization.startsWith("Bearer")) {
+		token = authorization.split(" ")[1];
 	}
 
 	if (!token) {

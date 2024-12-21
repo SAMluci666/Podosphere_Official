@@ -1,5 +1,7 @@
 const path = require("path");
 const express = require("express");
+const cors = require("cors");
+var cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
@@ -24,6 +26,9 @@ const blogRoute = require("./routes/blogRoutes");
 const app = express();
 
 app.use(express.static(path.join(__dirname, `/public/`)));
+
+app.use(cors({}));
+app.use(cookieParser());
 
 // SECURITY HTTP HEADERs
 app.use(helmet());
