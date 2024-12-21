@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login | Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Import jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- JWT Token -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+    <!-- linking the javascript file -->
+    <script src="../js/login-signup.js"></script>
+   <!-- Link the CSS file -->
+   <link rel="stylesheet" href="../css/login-signup.css">
+    </head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="close-btn">&times;</a>
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="../assets/images/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Access Courses, Blogs and much more<br> at SYNK IN </span>
+          <span class="text-2">Let's get you in.</span> 
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="../assets/images/backImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Take a step towards<br>a better and connected career.</span>
+          <span class="text-2">Let's SYNK IN</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form>
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input id="login-email" type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input id="login-password" type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="#" class="forgot-password">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Login">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+            </div>
+        </form>
+      </div>
+
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form>
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input id="signup-name" type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input id="signup-email" type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input id="signup-password" type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-key"></i>
+                <input id="signup-password-confirm" type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Signup">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -23,7 +23,7 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    margin-top: -10px;
+    margin-top: -10px !important;
     background-color: var(--bs-body-bg);
 }
 .hidden-scrollbar::-webkit-scrollbar {
@@ -43,7 +43,7 @@ body{
 }
 .container__navbar{
     background-color: var(--primary-color);
-    width: 95%;
+    width: 95% !important;
     border-radius: 50px;
     margin: 20px;
 }
@@ -146,7 +146,14 @@ body{
 
 .blog-section {
     background-color: var(--bs-body-bg);
-    padding: 4rem 1rem;
+    padding-bottom: 40px;
+}
+.section-header {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color-highlight);
+    margin-bottom: 40px;
+    font-family: var(--bs-body-font-family);
 }
 
 .container {
@@ -379,8 +386,8 @@ body{
     width: fit-content;
     margin: 3rem auto 0;
     padding: 1rem 2rem;
-    background: #ea580c;
-    color: white;
+    background: var(--primary-color);
+    color: var(--primary-white-highlight);
     border: none;
     border-radius: 25px;
     font-weight: 600;

@@ -548,24 +548,20 @@ body{
         font-size: 2rem;
     }
 }
-.section-header h2:hover {
-    color: #e65c00;
-}
-.section-header p {
+
+.section-header-desc {
     color: #666;
-    max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-.section-header h2 {
-    color: #ff6b00;
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    color: var(--primary-color-highlight);
+    /* margin-top: 40px; */
+    font-family: var(--bs-body-font-family);
 }
 .container3{
     /* background-color: #fff3e6; */

@@ -39,7 +39,7 @@ body{
 .navbar {
     display: flex;
     justify-content: center;
-    font-family: var(--navbar-font-family) !important;
+    /* font-family: var(--navbar-font-family) !important; */
 }
 .container__navbar{
     background-color: var(--primary-color);

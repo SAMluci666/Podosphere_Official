@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="../css/courses.css">
     <!-- <link rel="stylesheet" href="/css/index.css"> -->
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 
 </head>
-<body>
+<body class="hidden-scrollbar">
     <header>
         <section id="nav-bar">
             <nav id="navbar" class="navbar navbar-expand-lg">
@@ -78,9 +84,9 @@
     </header>
     <section class="section courses-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Courses</h2>
-                <p>Learn new skills and advance your career with these amazing courses.</p>
+            <div>
+                <h2 class="section-header text-center">Our Courses</h2>
+                <p class="section-header-desc">Learn new skills and advance your career with these amazing courses.</p>
             </div>
 
             <div class="courses-grid">
@@ -169,9 +175,9 @@
 
     <section class="section benefits-section">
         <div class="container1">
-            <div class="section-header">
-                <h2>Course Benefits</h2>
-                <p>Discover the unique benefits of enrolling in our courses and take your skills to the next level.</p>
+            <div>
+                <h2 class="section-header text-center">Course Benefits</h2>
+                <p class="section-header-desc">Discover the unique benefits of enrolling in our courses and take your skills to the next level.</p>
             </div>
     
             <div class="benefits-grid">
@@ -200,9 +206,9 @@
     
     <section class="section features-section">
         <div class="container2">
-            <div class="section-header">
-                <h2>Course Features</h2>
-                <p>Explore the features that make our courses stand out and provide an exceptional learning experience.</p>
+            <div>
+                <h2 class="section-header text-center">Course Features</h2>
+                <p class="section-header-desc">Explore the features that make our courses stand out and provide an exceptional learning experience.</p>
             </div>
     
             <div class="features-grid">
@@ -231,9 +237,9 @@
     
     <section class="section reviews-section">
         <div class="container3">
-            <div class="section-header">
-                <h2>What Our Students Say</h2>
-                <p>Hear from our satisfied students about their learning experience.</p>
+            <div>
+                <h2 class="section-header text-center">What Our Students Say</h2>
+                <p class="section-header-desc">Hear from our satisfied students about their learning experience.</p>
             </div>
 
             <div class="reviews-grid">
@@ -310,14 +316,15 @@
                     <div class="col-md-5 col-lg-3">
                         <!-- Newsletter -->
                         <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                        <form action="http://localhost:3000/newsletter" method="POST">
+                        <form id="newsletterForm">
                             <div class="form-floating mb-3 newsletter">
-                                <input type="email" name="email" class="form-control" id="floatingInput"
-                                    placeholder="name@example.com">
-                                <label for="floatingInput">Email address</label>
+                                <input type="email" name="email" class="form-control" id="newsletterEmail"
+                                    placeholder="name@example.com" required>
+                                <label for="newsletterEmail">Email address</label>
                             </div>
                             <button type="submit" class="btn-primary btn-newsletter">Submit</button>
                         </form>
+
                     </div>
                     <div class="col-md-5 col-sm-4 col-lg-2">
                         <h5 class="footer-heading">Contacts</h5>
@@ -345,20 +352,16 @@
                         <h5 class="footer-heading">Socials</h5>
                         <div class="social-icons">
                             <a href="https://www.instagram.com/podosphere.online" target="_blank">
-                                <img src="../assets/icons/instagram.png"
-                                    alt="Instagram">
+                                <img src="../assets/icons/instagram.png" alt="Instagram">
                             </a>
                             <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
-                                <img src="../assets/icons/linkedin.png"
-                                    alt="LinkedIn">
+                                <img src="../assets/icons/linkedin.png" alt="LinkedIn">
                             </a>
                             <a href="https://t.me/yourtelegramhandle" target="_blank">
-                                <img src="../assets/icons/telegram.png"
-                                    alt="Telegram">
+                                <img src="../assets/icons/telegram.png" alt="Telegram">
                             </a>
                             <a href="https://wa.me/yourwhatsapplink" target="_blank">
-                                <img src="../assets/icons/whatsapp.png"
-                                    alt="WhatsApp">
+                                <img src="../assets/icons/whatsapp.png" alt="WhatsApp">
                             </a>
                         </div>
                     </div>
@@ -371,5 +374,32 @@
             </div>
         </section>
     </footer>
+    <script>
+        $(document).ready(function () {
+            const newsletterAPI = "http://localhost:8089/api/v1/newsletters";
+
+            // Handle form submission for subscribing to the newsletter
+            $("#newsletterForm").on("submit", function (event) {
+                event.preventDefault();
+
+                const email = $("#newsletterEmail").val();
+
+                $.ajax({
+                    url: newsletterAPI,
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({ email }),
+                    success: (response) => {
+                        alert("Thank you for subscribing!");
+                        $("#newsletterEmail").val(""); // Clear the input field
+                    },
+                    error: (xhr) => {
+                        const message = xhr.responseJSON?.message || "An error occurred. Please try again.";
+                        alert(`Error: ${message}`);
+                    },
+                });
+            })
+        });
+    </script>
 </body>
 </html>

@@ -533,7 +533,7 @@ body {
         align-items: center;
     }
 
-    .event-cards {
+    .event-cards .hiring-cards {
         flex-direction: column;
         align-items: center;
     }
@@ -620,7 +620,7 @@ body {
     /* transition: 0s; */
 }
 
-.event-cards {
+.event-cards, .hiring-cards {
     display: flex;
     width: 90%;
     justify-content: center;

@@ -23,8 +23,8 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    margin-top: -10px;
     background-color: var(--bs-body-bg);
+    margin-top: -10px !important;
 }
 .hidden-scrollbar::-webkit-scrollbar {
     display: none;      
@@ -324,26 +324,26 @@ body {
     font-size: 1.1rem;
 }
 
-/* Courses Section */
-.courses-grid {
+/* hiring Section */
+.hiring-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .courses-grid {
+    .hiring-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .courses-grid {
+    .hiring-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.course-card {
+.hiring-card {
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -351,58 +351,58 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.course-card:hover {
+.hiring-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.course-card img {
+.hiring-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.course-content {
+.hiring-content {
     padding: 1.5rem;
 }
 
-.course-content h3 {
+.hiring-content h3 {
     color: #333;
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
 }
 
-.course-content p {
+.hiring-content p {
     color: #666;
     margin-bottom: 1rem;
     line-height: 1.5;
 }
-
-.course-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ea580c;
+.hiring-info {
+    display: block;
+    color:var(--primary-color);
     font-weight: 600;
 }
-.course-card:hover{
+.hiring-info span {
+    display: block;
+}
+.hiring-card:hover{
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     background-color: #000000;
     color: white;
 
 }
-.course-card:hover p{
+.hiring-card:hover p{
     color: white;
 }
-.course-card:hover h3{
+.hiring-card:hover h3{
     color: white;
 }
 
 .enroll-button {
-    display: block;
-    width: fit-content;
-    margin: 3rem auto 0;
+    display:block;
+    /* width: fit-content; */
+    margin: 1rem auto 0;
     padding: 1rem 2rem;
     background: #ea580c;
     color: white;

@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Java Script  -->
     <script>
         // JavaScript to handle scroll and navbar background change
@@ -33,7 +35,7 @@
                 // When scrolling past the hero section
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-colored');
-                navbar.classList.remove('sticky-top'); na
+                navbar.classList.remove('sticky-top');
             } else {
                 // When within the hero section
                 navbar.classList.remove('navbar-colored');
@@ -73,7 +75,7 @@
             <section id="nav-bar">
                 <nav id="navbar" class="navbar navbar-expand-lg">
                     <div class="container-fluid py-3 container__navbar">
-                        <a class="navbar-brand" href="/"><img src="/assets/images/logo/logo-without-bg-cropped.png" class=""
+                        <a class="navbar-brand" href="index.html"><img src="/Frontend/assets/images/logo/logo-without-bg-cropped.png" class=""
                                 alt=""></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false"
@@ -87,7 +89,7 @@
                         <div class="collapse navbar-collapse" id="navigation-bar">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" id="home" href="/index.html">Home</a>
+                                    <a class="nav-link" id="home" href="index.html">Home</a>
                                 </li>
                                 <!-- Dropdown Mentorship -->
                                 <li class="nav-item dropdown">
@@ -96,9 +98,9 @@
                                         Mentorship
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/pages/mentor.html">Live Connect</a></li>
-                                        <li><a class="dropdown-item" href="/pages/events.html">Upcoming Events</a></li>
-                                        <li><a class="dropdown-item" href="/pages/events.html">Past Events</a></li>
+                                        <li><a class="dropdown-item" href="pages/mentor.html">Live Connect</a></li>
+                                        <li><a class="dropdown-item" href="pages/events.html">Upcoming Events</a></li>
+                                        <li><a class="dropdown-item" href="pages/events.html">Past Events</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -106,22 +108,22 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link " id="courses" href="/pages/courses1.html">Courses</a>
+                                    <a class="nav-link " id="courses" href="pages/courses1.html">Courses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " id="events" href="/pages/events.html">Events</a>
+                                    <a class="nav-link " id="events" href="pages/events.html">Events</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " id="hiring" href="/pages/Hiring.html">Hiring</a>
+                                    <a class="nav-link " id="hiring" href="pages/Hiring.html">Hiring</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " id="about" href="#faq">About</a>
+                                    <a class="nav-link " id="about" href="pages/login-signup.html">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " id="blog" href="/pages/blogs.html">Blog</a>
+                                    <a class="nav-link " id="blog" href="pages/blogs.html">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " id="contact" href="/pages/contact.html">Contact</a>
+                                    <a class="nav-link " id="contact" href="pages/contact.html">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -280,7 +282,7 @@
         <!-- Hiring Section -->
         <section id="hiring" class="scroll_animation">
             <h2 class="text-center section__heading" section__heading>Hiring Opportunities</h2>
-            <div class="event-cards">
+            <div class="hiring-cards">
                 <div class="card">
                     <h3>Web Developer</h3>
                     <div class="text-container">
@@ -322,14 +324,15 @@
                         <div class="col-md-5 col-lg-3">
                             <!-- Newsletter -->
                             <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                            <form action="http://localhost:3000/newsletter" method="POST">
+                            <form id="newsletterForm">
                                 <div class="form-floating mb-3 newsletter">
-                                    <input type="email" name="email" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="newsletterEmail"
+                                        placeholder="name@example.com" required>
+                                    <label for="newsletterEmail">Email address</label>
                                 </div>
                                 <button type="submit" class="btn-primary btn-newsletter">Submit</button>
                             </form>
+    
                         </div>
                         <div class="col-md-5 col-sm-4 col-lg-2">
                             <h5 class="footer-heading">Contacts</h5>
@@ -345,11 +348,11 @@
                             <h5 class="footer-heading">Quick Links</h5>
                             <div class="footer-content">
                                 <ul class="footer-links">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="/pages/courses1.html">Courses</a></li>
-                                    <li><a href="/pages/events.html">Events</a></li>
-                                    <li><a href="/pages/Hiring.html">Hiring</a></li>
-                                    <li><a href="/pages/contact.html">Contact</a></li>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="courses1.html">Courses</a></li>
+                                    <li><a href="events.html">Events</a></li>
+                                    <li><a href="Hiring.html">Hiring</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -357,20 +360,16 @@
                             <h5 class="footer-heading">Socials</h5>
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/podosphere.online" target="_blank">
-                                    <img src="assets/icons/instagram.png"
-                                        alt="Instagram">
+                                    <img src="../assets/icons/instagram.png" alt="Instagram">
                                 </a>
                                 <a href="https://www.linkedin.com/company/tekin-atz" target="_blank">
-                                    <img src="assets/icons/linkedin.png"
-                                        alt="LinkedIn">
+                                    <img src="../assets/icons/linkedin.png" alt="LinkedIn">
                                 </a>
                                 <a href="https://t.me/yourtelegramhandle" target="_blank">
-                                    <img src="assets/icons/telegram.png"
-                                        alt="Telegram">
+                                    <img src="../assets/icons/telegram.png" alt="Telegram">
                                 </a>
                                 <a href="https://wa.me/yourwhatsapplink" target="_blank">
-                                    <img src="assets/icons/whatsapp.png"
-                                        alt="WhatsApp">
+                                    <img src="../assets/icons/whatsapp.png" alt="WhatsApp">
                                 </a>
                             </div>
                         </div>
@@ -383,7 +382,35 @@
                 </div>
             </section>
         </footer>
+        <script>
+            $(document).ready(function () {
+                const newsletterAPI = "http://localhost:8089/api/v1/newsletters";
+    
+                // Handle form submission for subscribing to the newsletter
+                $("#newsletterForm").on("submit", function (event) {
+                    event.preventDefault();
+    
+                    const email = $("#newsletterEmail").val();
+    
+                    $.ajax({
+                        url: newsletterAPI,
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify({ email }),
+                        success: (response) => {
+                            alert("Thank you for subscribing!");
+                            $("#newsletterEmail").val(""); // Clear the input field
+                        },
+                        error: (xhr) => {
+                            const message = xhr.responseJSON?.message || "An error occurred. Please try again.";
+                            alert(`Error: ${message}`);
+                        },
+                    });
+                })
+            });
+        </script>
     </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
