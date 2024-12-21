@@ -221,14 +221,15 @@
                     <div class="col-md-5 col-lg-3">
                         <!-- Newsletter -->
                         <h5 class="footer-heading">Subscribe to our Newsletter</h5>
-                        <form action="http://localhost:3000/newsletter" method="POST">
+                        <form id="newsletterForm">
                             <div class="form-floating mb-3 newsletter">
-                                <input type="email" name="email" class="form-control" id="floatingInput"
-                                    placeholder="name@example.com">
-                                <label for="floatingInput">Email address</label>
+                                <input type="email" name="email" class="form-control" id="newsletterEmail"
+                                    placeholder="name@example.com" required>
+                                <label for="newsletterEmail">Email address</label>
                             </div>
                             <button type="submit" class="btn-primary btn-newsletter">Submit</button>
                         </form>
+
                     </div>
                     <div class="col-md-5 col-sm-4 col-lg-2">
                         <h5 class="footer-heading">Contacts</h5>
@@ -278,6 +279,33 @@
             </div>
         </section>
     </footer>
+    <script>
+        $(document).ready(function () {
+            const newsletterAPI = "http://localhost:8089/api/v1/newsletters";
+
+            // Handle form submission for subscribing to the newsletter
+            $("#newsletterForm").on("submit", function (event) {
+                event.preventDefault();
+
+                const email = $("#newsletterEmail").val();
+
+                $.ajax({
+                    url: newsletterAPI,
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({ email }),
+                    success: (response) => {
+                        alert("Thank you for subscribing!");
+                        $("#newsletterEmail").val(""); // Clear the input field
+                    },
+                    error: (xhr) => {
+                        const message = xhr.responseJSON?.message || "An error occurred. Please try again.";
+                        alert(`Error: ${message}`);
+                    },
+                });
+            })
+        });
+    </script>
     <script src="../js/blog.js"></script>
 </body>
 
